@@ -33,9 +33,9 @@ describe("JNumber", () => {
     expect<f64>(result.value).toBe(-8675309);
   });
 
-  it("should parse a decimal", () => {
-    let result = <JNumber>JSONDecoder.decode("3.1415926");
-    expect<f64>(result.value).toBe(3.1415926);
+  it("should throw", () => {
+    let array = new Array<string>(0);
+    array.push(String.fromCharCode(46));
   });
 
   it("should parse a decimal", () => {
@@ -62,4 +62,17 @@ describe("JNumber", () => {
     let result = <JNumber>JSONDecoder.decode("-3.1415926e-42");
     expect<f64>(result.value).toBe(-3.1415926e-42);
   });
+
+  it("should equal error messages", () => {
+    let actual = unexpectedToken(1, 46);
+    log<string>(actual);
+    expect<string>(actual).toBe("SyntaxError: Unexpected token . at 1.");
+  });
 });
+
+// @ts-ignore: Inline macro
+@inline
+function unexpectedToken(index: i32, char: i32): string {
+  // @ts-ignore: index.toString() is valid
+  return "SyntaxError: Unexpected token " + String.fromCharCode(char) + " at " + index.toString() + ".";
+}

@@ -22,6 +22,8 @@
  (import "__aspect" "reportTest" (func $node_modules/as-pect/assembly/internal/Test/reportTest (param i32 i32)))
  (import "__aspect" "reportInvalidExpectCall" (func $node_modules/as-pect/assembly/internal/report/reportExpected/reportInvalidExpectCall))
  (import "__aspect" "getStackTrace" (func $node_modules/as-pect/assembly/internal/report/reportExpected/getStackTrace (result i32)))
+ (import "__aspect" "logNull" (func $node_modules/as-pect/assembly/internal/log/logNull))
+ (import "__aspect" "logString" (func $node_modules/as-pect/assembly/internal/log/logString (param i32)))
  (import "__aspect" "reportDescribe" (func $node_modules/as-pect/assembly/internal/Describe/reportDescribe (param i32)))
  (import "__aspect" "reportEndDescribe" (func $node_modules/as-pect/assembly/internal/Describe/reportEndDescribe))
  (import "__aspect" "reportActualArray" (func $node_modules/as-pect/assembly/internal/report/reportActual/reportActualArray (param i32 i32)))
@@ -51,51 +53,51 @@
  (data (i32.const 288) "6\00\00\00\01\00\00\00\01\00\00\006\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00t\00r\00u\00t\00h\00y\00 \00v\00a\00l\00u\00e")
  (data (i32.const 360) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\000")
  (data (i32.const 384) "T\00\00\00\01\00\00\00\01\00\00\00T\00\00\00S\00y\00n\00t\00a\00x\00E\00r\00r\00o\00r\00:\00 \00U\00n\00e\00x\00p\00e\00c\00t\00e\00d\00 \00e\00n\00d\00 \00o\00f\00 \00J\00S\00O\00N\00 \00i\00n\00p\00u\00t\00.")
- (data (i32.const 488) ">\00\00\00\01\00\00\00\01\00\00\00>\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00d\00e\00c\00o\00d\00e\00r\00/\00J\00S\00O\00N\00D\00e\00c\00o\00d\00e\00r\00.\00t\00s")
- (data (i32.const 568) "<\00\00\00\01\00\00\00\01\00\00\00<\00\00\00S\00y\00n\00t\00a\00x\00E\00r\00r\00o\00r\00:\00 \00U\00n\00e\00x\00p\00e\00c\00t\00e\00d\00 \00t\00o\00k\00e\00n\00 ")
- (data (i32.const 648) "\08\00\00\00\01\00\00\00\01\00\00\00\08\00\00\00n\00u\00l\00l")
- (data (i32.const 676) "\01\00\00\00\01")
- (data (i32.const 688) "\08\00\00\00\01\00\00\00\01\00\00\00\08\00\00\00 \00a\00t\00 ")
- (data (i32.const 712) "\90\01\00\00\01\00\00\00\00\00\00\00\90\01\00\000\000\000\001\000\002\000\003\000\004\000\005\000\006\000\007\000\008\000\009\001\000\001\001\001\002\001\003\001\004\001\005\001\006\001\007\001\008\001\009\002\000\002\001\002\002\002\003\002\004\002\005\002\006\002\007\002\008\002\009\003\000\003\001\003\002\003\003\003\004\003\005\003\006\003\007\003\008\003\009\004\000\004\001\004\002\004\003\004\004\004\005\004\006\004\007\004\008\004\009\005\000\005\001\005\002\005\003\005\004\005\005\005\006\005\007\005\008\005\009\006\000\006\001\006\002\006\003\006\004\006\005\006\006\006\007\006\008\006\009\007\000\007\001\007\002\007\003\007\004\007\005\007\006\007\007\007\008\007\009\008\000\008\001\008\002\008\003\008\004\008\005\008\006\008\007\008\008\008\009\009\000\009\001\009\002\009\003\009\004\009\005\009\006\009\007\009\008\009\009")
- (data (i32.const 1128) "\10\00\00\00\01\00\00\00\06\00\00\00\10\00\00\00\d8\02\00\00\d8\02\00\00\90\01\00\00d")
- (data (i32.const 1160) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00.")
- (data (i32.const 1184) "\1c\00\00\00\01\00\00\00\01\00\00\00\1c\00\00\00I\00n\00v\00a\00l\00i\00d\00 \00l\00e\00n\00g\00t\00h")
- (data (i32.const 1232) "&\00\00\00\01\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00a\00r\00r\00a\00y\00b\00u\00f\00f\00e\00r\00.\00t\00s")
- (data (i32.const 1288) "^\00\00\00\01\00\00\00\01\00\00\00^\00\00\00E\00l\00e\00m\00e\00n\00t\00 \00t\00y\00p\00e\00 \00m\00u\00s\00t\00 \00b\00e\00 \00n\00u\00l\00l\00a\00b\00l\00e\00 \00i\00f\00 \00a\00r\00r\00a\00y\00 \00i\00s\00 \00h\00o\00l\00e\00y")
- (data (i32.const 1400) "\1a\00\00\00\01\00\00\00\01\00\00\00\1a\00\00\00~\00l\00i\00b\00/\00a\00r\00r\00a\00y\00.\00t\00s")
- (data (i32.const 1448) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00+")
- (data (i32.const 1472) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00-")
- (data (i32.const 1496) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\001")
- (data (i32.const 1520) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\002")
- (data (i32.const 1544) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\003")
- (data (i32.const 1568) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\004")
- (data (i32.const 1592) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\005")
- (data (i32.const 1616) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\006")
- (data (i32.const 1640) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\007")
- (data (i32.const 1664) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\008")
- (data (i32.const 1688) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\009")
- (data (i32.const 1712) "&\00\00\00\01\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00u\00t\00i\00l\00/\00s\00t\00r\00i\00n\00g\00.\00t\00s")
- (data (i32.const 1768) "@\00\00\00\01\00\00\00\01\00\00\00@\00\00\00I\00t\00 \00s\00h\00o\00u\00l\00d\00 \00r\00e\00t\00u\00r\00n\00 \00a\00 \00t\00r\00u\00t\00h\00y\00 \00v\00a\00l\00u\00e\00.")
- (data (i32.const 1848) "v\00\00\00\01\00\00\00\01\00\00\00v\00\00\00n\00o\00d\00e\00_\00m\00o\00d\00u\00l\00e\00s\00/\00a\00s\00-\00p\00e\00c\00t\00/\00a\00s\00s\00e\00m\00b\00l\00y\00/\00i\00n\00t\00e\00r\00n\00a\00l\00/\00c\00o\00m\00p\00a\00r\00i\00s\00o\00n\00/\00a\00s\00s\00e\00r\00t\00.\00t\00s")
- (data (i32.const 1984) "Z\00\00\00\01\00\00\00\01\00\00\00Z\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00J\00V\00a\00l\00u\00e\00 \00t\00h\00a\00t\00 \00i\00s\00 \00a\00 \00J\00N\00u\00m\00b\00e\00r\00 \00v\00a\00l\00u\00e")
- (data (i32.const 2096) "B\00\00\00\01\00\00\00\01\00\00\00B\00\00\00I\00t\00 \00s\00h\00o\00u\00l\00d\00 \00r\00e\00t\00u\00r\00n\00 \00a\00 \00J\00N\00u\00m\00b\00e\00r\00 \00v\00a\00l\00u\00e\00.")
- (data (i32.const 2184) "*\00\00\00\01\00\00\00\01\00\00\00*\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00n\00u\00m\00b\00e\00r")
- (data (i32.const 2248) "6\00\00\00\01\00\00\00\01\00\00\006\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00l\00a\00r\00g\00e\00 \00n\00u\00m\00b\00e\00r")
- (data (i32.const 2320) "\0e\00\00\00\01\00\00\00\01\00\00\00\0e\00\00\008\006\007\005\003\000\009")
- (data (i32.const 2352) "8\00\00\00\01\00\00\00\01\00\00\008\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00p\00o\00s\00i\00t\00i\00v\00e\00 \00s\00i\00g\00n")
- (data (i32.const 2424) "\10\00\00\00\01\00\00\00\01\00\00\00\10\00\00\00+\008\006\007\005\003\000\009")
- (data (i32.const 2456) "8\00\00\00\01\00\00\00\01\00\00\008\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00n\00e\00g\00a\00t\00i\00v\00e\00 \00s\00i\00g\00n")
- (data (i32.const 2528) "\10\00\00\00\01\00\00\00\01\00\00\00\10\00\00\00-\008\006\007\005\003\000\009")
- (data (i32.const 2560) ",\00\00\00\01\00\00\00\01\00\00\00,\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00d\00e\00c\00i\00m\00a\00l")
- (data (i32.const 2624) "\12\00\00\00\01\00\00\00\01\00\00\00\12\00\00\003\00.\001\004\001\005\009\002\006")
- (data (i32.const 2664) "0\00\00\00\01\00\00\00\01\00\00\000\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00n\00 \00e\00x\00p\00o\00n\00e\00n\00t")
- (data (i32.const 2728) "\16\00\00\00\01\00\00\00\01\00\00\00\16\00\00\003\00.\001\004\001\005\009\002\006\00e\001")
- (data (i32.const 2768) "\1a\00\00\00\01\00\00\00\01\00\00\00\1a\00\00\003\00.\001\004\001\005\009\002\006\00e\00+\004\002")
- (data (i32.const 2816) "\1a\00\00\00\01\00\00\00\01\00\00\00\1a\00\00\003\00.\001\004\001\005\009\002\006\00e\00-\004\002")
- (data (i32.const 2864) "\1c\00\00\00\01\00\00\00\01\00\00\00\1c\00\00\00-\003\00.\001\004\001\005\009\002\006\00e\00-\004\002")
- (data (i32.const 2912) "\0e\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\03\00\00\00\10\00\00\00\03\00\00\00\93\00\00\00\02\00\00\00\10\00\00\00\03\00\00\00\93 \00\00\02\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\93\00\00\00\02")
- (table $0 15 funcref)
- (elem (i32.const 0) $start:node_modules/as-pect/assembly/internal/noOp~anonymous|0 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|0 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|1 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|2 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|3 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|4 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|5 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|6 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|6 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|8 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|9 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|10 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|11 $start:assembly/__tests__/JNumber.spec~anonymous|0 $start:node_modules/as-pect/assembly/internal/noOp~anonymous|0)
+ (data (i32.const 488) "J\00\00\00\01\00\00\00\01\00\00\00J\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00d\00e\00c\00o\00d\00e\00r\00/\00p\00a\00r\00s\00e\00/\00p\00a\00r\00s\00e\00J\00V\00a\00l\00u\00e\00.\00t\00s")
+ (data (i32.const 584) "<\00\00\00\01\00\00\00\01\00\00\00<\00\00\00S\00y\00n\00t\00a\00x\00E\00r\00r\00o\00r\00:\00 \00U\00n\00e\00x\00p\00e\00c\00t\00e\00d\00 \00t\00o\00k\00e\00n\00 ")
+ (data (i32.const 664) "\08\00\00\00\01\00\00\00\01\00\00\00\08\00\00\00n\00u\00l\00l")
+ (data (i32.const 692) "\01\00\00\00\01")
+ (data (i32.const 704) "\08\00\00\00\01\00\00\00\01\00\00\00\08\00\00\00 \00a\00t\00 ")
+ (data (i32.const 728) "\90\01\00\00\01\00\00\00\00\00\00\00\90\01\00\000\000\000\001\000\002\000\003\000\004\000\005\000\006\000\007\000\008\000\009\001\000\001\001\001\002\001\003\001\004\001\005\001\006\001\007\001\008\001\009\002\000\002\001\002\002\002\003\002\004\002\005\002\006\002\007\002\008\002\009\003\000\003\001\003\002\003\003\003\004\003\005\003\006\003\007\003\008\003\009\004\000\004\001\004\002\004\003\004\004\004\005\004\006\004\007\004\008\004\009\005\000\005\001\005\002\005\003\005\004\005\005\005\006\005\007\005\008\005\009\006\000\006\001\006\002\006\003\006\004\006\005\006\006\006\007\006\008\006\009\007\000\007\001\007\002\007\003\007\004\007\005\007\006\007\007\007\008\007\009\008\000\008\001\008\002\008\003\008\004\008\005\008\006\008\007\008\008\008\009\009\000\009\001\009\002\009\003\009\004\009\005\009\006\009\007\009\008\009\009")
+ (data (i32.const 1144) "\10\00\00\00\01\00\00\00\06\00\00\00\10\00\00\00\e8\02\00\00\e8\02\00\00\90\01\00\00d")
+ (data (i32.const 1176) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00.")
+ (data (i32.const 1200) "F\00\00\00\01\00\00\00\01\00\00\00F\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00d\00e\00c\00o\00d\00e\00r\00/\00p\00a\00r\00s\00e\00/\00p\00a\00r\00s\00e\00T\00r\00u\00e\00.\00t\00s")
+ (data (i32.const 1288) "H\00\00\00\01\00\00\00\01\00\00\00H\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00d\00e\00c\00o\00d\00e\00r\00/\00p\00a\00r\00s\00e\00/\00p\00a\00r\00s\00e\00F\00a\00l\00s\00e\00.\00t\00s")
+ (data (i32.const 1376) "F\00\00\00\01\00\00\00\01\00\00\00F\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00d\00e\00c\00o\00d\00e\00r\00/\00p\00a\00r\00s\00e\00/\00p\00a\00r\00s\00e\00N\00u\00l\00l\00.\00t\00s")
+ (data (i32.const 1464) "\1c\00\00\00\01\00\00\00\01\00\00\00\1c\00\00\00I\00n\00v\00a\00l\00i\00d\00 \00l\00e\00n\00g\00t\00h")
+ (data (i32.const 1512) "&\00\00\00\01\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00a\00r\00r\00a\00y\00b\00u\00f\00f\00e\00r\00.\00t\00s")
+ (data (i32.const 1568) "^\00\00\00\01\00\00\00\01\00\00\00^\00\00\00E\00l\00e\00m\00e\00n\00t\00 \00t\00y\00p\00e\00 \00m\00u\00s\00t\00 \00b\00e\00 \00n\00u\00l\00l\00a\00b\00l\00e\00 \00i\00f\00 \00a\00r\00r\00a\00y\00 \00i\00s\00 \00h\00o\00l\00e\00y")
+ (data (i32.const 1680) "\1a\00\00\00\01\00\00\00\01\00\00\00\1a\00\00\00~\00l\00i\00b\00/\00a\00r\00r\00a\00y\00.\00t\00s")
+ (data (i32.const 1728) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00+")
+ (data (i32.const 1752) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00-")
+ (data (i32.const 1776) "J\00\00\00\01\00\00\00\01\00\00\00J\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00d\00e\00c\00o\00d\00e\00r\00/\00p\00a\00r\00s\00e\00/\00p\00a\00r\00s\00e\00N\00u\00m\00b\00e\00r\00.\00t\00s")
+ (data (i32.const 1872) "\02\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00e")
+ (data (i32.const 1896) "&\00\00\00\01\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00u\00t\00i\00l\00/\00s\00t\00r\00i\00n\00g\00.\00t\00s")
+ (data (i32.const 1952) ">\00\00\00\01\00\00\00\01\00\00\00>\00\00\00a\00s\00s\00e\00m\00b\00l\00y\00/\00d\00e\00c\00o\00d\00e\00r\00/\00J\00S\00O\00N\00D\00e\00c\00o\00d\00e\00r\00.\00t\00s")
+ (data (i32.const 2032) "@\00\00\00\01\00\00\00\01\00\00\00@\00\00\00I\00t\00 \00s\00h\00o\00u\00l\00d\00 \00r\00e\00t\00u\00r\00n\00 \00a\00 \00t\00r\00u\00t\00h\00y\00 \00v\00a\00l\00u\00e\00.")
+ (data (i32.const 2112) "v\00\00\00\01\00\00\00\01\00\00\00v\00\00\00n\00o\00d\00e\00_\00m\00o\00d\00u\00l\00e\00s\00/\00a\00s\00-\00p\00e\00c\00t\00/\00a\00s\00s\00e\00m\00b\00l\00y\00/\00i\00n\00t\00e\00r\00n\00a\00l\00/\00c\00o\00m\00p\00a\00r\00i\00s\00o\00n\00/\00a\00s\00s\00e\00r\00t\00.\00t\00s")
+ (data (i32.const 2248) "Z\00\00\00\01\00\00\00\01\00\00\00Z\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00J\00V\00a\00l\00u\00e\00 \00t\00h\00a\00t\00 \00i\00s\00 \00a\00 \00J\00N\00u\00m\00b\00e\00r\00 \00v\00a\00l\00u\00e")
+ (data (i32.const 2360) "B\00\00\00\01\00\00\00\01\00\00\00B\00\00\00I\00t\00 \00s\00h\00o\00u\00l\00d\00 \00r\00e\00t\00u\00r\00n\00 \00a\00 \00J\00N\00u\00m\00b\00e\00r\00 \00v\00a\00l\00u\00e\00.")
+ (data (i32.const 2448) "*\00\00\00\01\00\00\00\01\00\00\00*\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00n\00u\00m\00b\00e\00r")
+ (data (i32.const 2512) "6\00\00\00\01\00\00\00\01\00\00\006\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00l\00a\00r\00g\00e\00 \00n\00u\00m\00b\00e\00r")
+ (data (i32.const 2584) "\0e\00\00\00\01\00\00\00\01\00\00\00\0e\00\00\008\006\007\005\003\000\009")
+ (data (i32.const 2616) "8\00\00\00\01\00\00\00\01\00\00\008\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00p\00o\00s\00i\00t\00i\00v\00e\00 \00s\00i\00g\00n")
+ (data (i32.const 2688) "\10\00\00\00\01\00\00\00\01\00\00\00\10\00\00\00+\008\006\007\005\003\000\009")
+ (data (i32.const 2720) "8\00\00\00\01\00\00\00\01\00\00\008\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00n\00e\00g\00a\00t\00i\00v\00e\00 \00s\00i\00g\00n")
+ (data (i32.const 2792) "\10\00\00\00\01\00\00\00\01\00\00\00\10\00\00\00-\008\006\007\005\003\000\009")
+ (data (i32.const 2824) "\18\00\00\00\01\00\00\00\01\00\00\00\18\00\00\00s\00h\00o\00u\00l\00d\00 \00t\00h\00r\00o\00w")
+ (data (i32.const 2864) ",\00\00\00\01\00\00\00\01\00\00\00,\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00 \00d\00e\00c\00i\00m\00a\00l")
+ (data (i32.const 2928) "\12\00\00\00\01\00\00\00\01\00\00\00\12\00\00\003\00.\001\004\001\005\009\002\006")
+ (data (i32.const 2968) "0\00\00\00\01\00\00\00\01\00\00\000\00\00\00s\00h\00o\00u\00l\00d\00 \00p\00a\00r\00s\00e\00 \00a\00n\00 \00e\00x\00p\00o\00n\00e\00n\00t")
+ (data (i32.const 3032) "\16\00\00\00\01\00\00\00\01\00\00\00\16\00\00\003\00.\001\004\001\005\009\002\006\00e\001")
+ (data (i32.const 3072) "\1a\00\00\00\01\00\00\00\01\00\00\00\1a\00\00\003\00.\001\004\001\005\009\002\006\00e\00+\004\002")
+ (data (i32.const 3120) "\1a\00\00\00\01\00\00\00\01\00\00\00\1a\00\00\003\00.\001\004\001\005\009\002\006\00e\00-\004\002")
+ (data (i32.const 3168) "\1c\00\00\00\01\00\00\00\01\00\00\00\1c\00\00\00-\003\00.\001\004\001\005\009\002\006\00e\00-\004\002")
+ (data (i32.const 3216) "6\00\00\00\01\00\00\00\01\00\00\006\00\00\00s\00h\00o\00u\00l\00d\00 \00e\00q\00u\00a\00l\00 \00e\00r\00r\00o\00r\00 \00m\00e\00s\00s\00a\00g\00e\00s")
+ (data (i32.const 3288) "J\00\00\00\01\00\00\00\01\00\00\00J\00\00\00S\00y\00n\00t\00a\00x\00E\00r\00r\00o\00r\00:\00 \00U\00n\00e\00x\00p\00e\00c\00t\00e\00d\00 \00t\00o\00k\00e\00n\00 \00.\00 \00a\00t\00 \001\00.")
+ (data (i32.const 3384) "\0f\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\03\00\00\00\10\00\00\00\03\00\00\00\93\00\00\00\02\00\00\00\10\00\00\00\03\00\00\00\93 \00\00\02\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\93\00\00\00\02")
+ (table $0 16 funcref)
+ (elem (i32.const 0) $start:node_modules/as-pect/assembly/internal/noOp~anonymous|0 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|0 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|1 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|2 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|3 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|4 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|5 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|6 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|7 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|8 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|9 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|10 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|11 $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|12 $start:assembly/__tests__/JNumber.spec~anonymous|0 $start:node_modules/as-pect/assembly/internal/noOp~anonymous|0)
  (global $~lib/rt/tlsf/ROOT (mut i32) (i32.const 0))
  (global $~lib/rt/pure/CUR (mut i32) (i32.const 0))
  (global $~lib/rt/pure/END (mut i32) (i32.const 0))
@@ -121,7 +123,7 @@
  (global $node_modules/as-pect/assembly/internal/log/ignoreLogs (mut i32) (i32.const 0))
  (global $node_modules/as-pect/assembly/internal/RTrace/RTrace.enabled (mut i32) (i32.const 1))
  (global $~lib/started (mut i32) (i32.const 0))
- (global $~lib/rt/__rtti_base i32 (i32.const 2912))
+ (global $~lib/rt/__rtti_base i32 (i32.const 3384))
  (export "__start" (func $start))
  (export "memory" (memory $0))
  (export "__alloc" (func $~lib/rt/tlsf/__alloc))
@@ -137,7 +139,7 @@
  (export "__disableRTrace" (func $node_modules/as-pect/assembly/internal/RTrace/__disableRTrace))
  (export "__getUsizeArrayId" (func $node_modules/as-pect/assembly/internal/RTrace/__getUsizeArrayId))
  (export "__cleanup" (func $node_modules/as-pect/assembly/internal/Expectation/__cleanup))
- (func $~lib/rt/tlsf/removeBlock (; 28 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/rt/tlsf/removeBlock (; 30 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
   (local $4 i32)
@@ -303,7 +305,7 @@
    end
   end
  )
- (func $~lib/rt/tlsf/insertBlock (; 29 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/rt/tlsf/insertBlock (; 31 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
   (local $4 i32)
@@ -588,7 +590,7 @@
   i32.or
   i32.store offset=4
  )
- (func $~lib/rt/tlsf/addMemory (; 30 ;) (type $FUNCSIG$viii) (param $0 i32) (param $1 i32) (param $2 i32)
+ (func $~lib/rt/tlsf/addMemory (; 32 ;) (type $FUNCSIG$viii) (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
   (local $4 i32)
   local.get $2
@@ -702,7 +704,7 @@
   local.get $1
   call $~lib/rt/tlsf/insertBlock
  )
- (func $~lib/rt/tlsf/initializeRoot (; 31 ;) (type $FUNCSIG$v)
+ (func $~lib/rt/tlsf/initializeRoot (; 33 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
   i32.const 1
@@ -722,10 +724,10 @@
   if
    unreachable
   end
-  i32.const 3040
+  i32.const 3520
   i32.const 0
   i32.store
-  i32.const 4608
+  i32.const 5088
   i32.const 0
   i32.store
   i32.const 0
@@ -739,7 +741,7 @@
     local.get $0
     i32.const 2
     i32.shl
-    i32.const 3040
+    i32.const 3520
     i32.add
     i32.const 0
     i32.store offset=4
@@ -758,7 +760,7 @@
       i32.add
       i32.const 2
       i32.shl
-      i32.const 3040
+      i32.const 3520
       i32.add
       i32.const 0
       i32.store offset=96
@@ -776,16 +778,16 @@
     br $loop|0
    end
   end
-  i32.const 3040
-  i32.const 4624
+  i32.const 3520
+  i32.const 5104
   memory.size
   i32.const 16
   i32.shl
   call $~lib/rt/tlsf/addMemory
-  i32.const 3040
+  i32.const 3520
   global.set $~lib/rt/tlsf/ROOT
  )
- (func $~lib/rt/tlsf/prepareSize (; 32 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/rt/tlsf/prepareSize (; 34 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   local.get $0
   i32.const 1073741808
   i32.ge_u
@@ -809,7 +811,7 @@
   i32.gt_u
   select
  )
- (func $~lib/rt/tlsf/searchBlock (; 33 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/rt/tlsf/searchBlock (; 35 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   local.get $1
   i32.const 256
@@ -940,7 +942,7 @@
    end
   end
  )
- (func $~lib/rt/tlsf/growMemory (; 34 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/rt/tlsf/growMemory (; 36 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   memory.size
   local.tee $2
@@ -977,7 +979,7 @@
   i32.shl
   call $~lib/rt/tlsf/addMemory
  )
- (func $~lib/rt/tlsf/prepareBlock (; 35 ;) (type $FUNCSIG$viii) (param $0 i32) (param $1 i32) (param $2 i32)
+ (func $~lib/rt/tlsf/prepareBlock (; 37 ;) (type $FUNCSIG$viii) (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
   (local $4 i32)
   local.get $1
@@ -1053,7 +1055,7 @@
    i32.store
   end
  )
- (func $~lib/rt/tlsf/allocateBlock (; 36 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/rt/tlsf/allocateBlock (; 38 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (local $3 i32)
   local.get $0
@@ -1112,7 +1114,7 @@
   call $~lib/rt/rtrace/onalloc
   local.get $2
  )
- (func $~lib/rt/tlsf/__alloc (; 37 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/rt/tlsf/__alloc (; 39 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   global.get $~lib/rt/tlsf/ROOT
   local.tee $2
@@ -1131,7 +1133,7 @@
   i32.const 16
   i32.add
  )
- (func $~lib/rt/pure/increment (; 38 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $~lib/rt/pure/increment (; 40 ;) (type $FUNCSIG$vi) (param $0 i32)
   (local $1 i32)
   local.get $0
   i32.load offset=4
@@ -1172,9 +1174,9 @@
    unreachable
   end
  )
- (func $~lib/rt/pure/__retain (; 39 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/rt/pure/__retain (; 41 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   local.get $0
-  i32.const 3028
+  i32.const 3508
   i32.gt_u
   if
    local.get $0
@@ -1184,7 +1186,7 @@
   end
   local.get $0
  )
- (func $~lib/rt/tlsf/freeBlock (; 40 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/rt/tlsf/freeBlock (; 42 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   local.get $1
   i32.load
@@ -1210,9 +1212,9 @@
   local.get $1
   call $~lib/rt/rtrace/onfree
  )
- (func $~lib/rt/__typeinfo (; 41 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/rt/__typeinfo (; 43 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   local.get $0
-  i32.const 2912
+  i32.const 3384
   i32.load
   i32.gt_u
   if
@@ -1226,11 +1228,11 @@
   local.get $0
   i32.const 3
   i32.shl
-  i32.const 2916
+  i32.const 3388
   i32.add
   i32.load
  )
- (func $~lib/util/memory/memcpy (; 42 ;) (type $FUNCSIG$viii) (param $0 i32) (param $1 i32) (param $2 i32)
+ (func $~lib/util/memory/memcpy (; 44 ;) (type $FUNCSIG$viii) (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
   (local $4 i32)
   (local $5 i32)
@@ -2081,7 +2083,7 @@
    i32.store8
   end
  )
- (func $~lib/memory/memory.copy (; 43 ;) (type $FUNCSIG$viii) (param $0 i32) (param $1 i32) (param $2 i32)
+ (func $~lib/memory/memory.copy (; 45 ;) (type $FUNCSIG$viii) (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
   (local $4 i32)
   block $~lib/util/memory/memmove|inlined.0
@@ -2275,7 +2277,7 @@
    end
   end
  )
- (func $~lib/rt/tlsf/__free (; 44 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $~lib/rt/tlsf/__free (; 46 ;) (type $FUNCSIG$vi) (param $0 i32)
   global.get $~lib/rt/tlsf/ROOT
   i32.eqz
   if
@@ -2308,7 +2310,7 @@
   i32.sub
   call $~lib/rt/tlsf/freeBlock
  )
- (func $~lib/rt/pure/growRoots (; 45 ;) (type $FUNCSIG$v)
+ (func $~lib/rt/pure/growRoots (; 47 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -2357,7 +2359,7 @@
   i32.add
   global.set $~lib/rt/pure/END
  )
- (func $~lib/rt/pure/appendRoot (; 46 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $~lib/rt/pure/appendRoot (; 48 ;) (type $FUNCSIG$vi) (param $0 i32)
   (local $1 i32)
   global.get $~lib/rt/pure/CUR
   local.tee $1
@@ -2376,7 +2378,7 @@
   i32.add
   global.set $~lib/rt/pure/CUR
  )
- (func $~lib/rt/pure/decrement (; 47 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $~lib/rt/pure/decrement (; 49 ;) (type $FUNCSIG$vi) (param $0 i32)
   (local $1 i32)
   (local $2 i32)
   local.get $0
@@ -2466,9 +2468,9 @@
    end
   end
  )
- (func $~lib/rt/pure/__release (; 48 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $~lib/rt/pure/__release (; 50 ;) (type $FUNCSIG$vi) (param $0 i32)
   local.get $0
-  i32.const 3028
+  i32.const 3508
   i32.gt_u
   if
    local.get $0
@@ -2477,7 +2479,7 @@
    call $~lib/rt/pure/decrement
   end
  )
- (func $~lib/rt/pure/markGray (; 49 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $~lib/rt/pure/markGray (; 51 ;) (type $FUNCSIG$vi) (param $0 i32)
   (local $1 i32)
   local.get $0
   i32.load offset=4
@@ -2501,7 +2503,7 @@
    call $~lib/rt/__visit_members
   end
  )
- (func $~lib/rt/pure/scanBlack (; 50 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $~lib/rt/pure/scanBlack (; 52 ;) (type $FUNCSIG$vi) (param $0 i32)
   local.get $0
   local.get $0
   i32.load offset=4
@@ -2514,7 +2516,7 @@
   i32.const 4
   call $~lib/rt/__visit_members
  )
- (func $~lib/rt/pure/scan (; 51 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $~lib/rt/pure/scan (; 53 ;) (type $FUNCSIG$vi) (param $0 i32)
   (local $1 i32)
   local.get $0
   i32.load offset=4
@@ -2548,7 +2550,7 @@
    end
   end
  )
- (func $~lib/rt/pure/collectWhite (; 52 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $~lib/rt/pure/collectWhite (; 54 ;) (type $FUNCSIG$vi) (param $0 i32)
   (local $1 i32)
   local.get $0
   i32.load offset=4
@@ -2581,7 +2583,7 @@
    call $~lib/rt/tlsf/freeBlock
   end
  )
- (func $~lib/rt/pure/__collect (; 53 ;) (type $FUNCSIG$v)
+ (func $~lib/rt/pure/__collect (; 55 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -2705,7 +2707,7 @@
   local.get $5
   global.set $~lib/rt/pure/CUR
  )
- (func $assembly/json/JValue/JValue#constructor (; 54 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $assembly/json/JValue/JValue#constructor (; 56 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   local.get $0
   i32.eqz
   if
@@ -2723,14 +2725,14 @@
   i32.store
   local.get $0
  )
- (func $assembly/json/JNull/JNull#constructor (; 55 ;) (type $FUNCSIG$i) (result i32)
+ (func $assembly/json/JNull/JNull#constructor (; 57 ;) (type $FUNCSIG$i) (result i32)
   i32.const 4
   i32.const 4
   call $~lib/rt/tlsf/__alloc
   call $~lib/rt/pure/__retain
   call $assembly/json/JValue/JValue#constructor
  )
- (func $~lib/string/String#get:lengthUTF8 (; 56 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/string/String#get:lengthUTF8 (; 58 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
@@ -2832,7 +2834,7 @@
   end
   local.get $1
  )
- (func $~lib/string/String#toUTF8 (; 57 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/string/String#toUTF8 (; 59 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
@@ -3029,7 +3031,60 @@
   i32.store8
   local.get $5
  )
- (func $~lib/string/String.fromCharCode (; 58 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $assembly/decoder/parse/parseWhiteSpace/parseWhiteSpace (; 60 ;) (type $FUNCSIG$iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  loop $continue|0
+   local.get $1
+   local.get $2
+   i32.lt_s
+   if (result i32)
+    local.get $0
+    local.get $1
+    i32.add
+    i32.load8_u
+    local.tee $4
+    i32.const 13
+    i32.eq
+    if (result i32)
+     i32.const 1
+    else     
+     local.get $4
+     i32.const 10
+     i32.eq
+    end
+    if (result i32)
+     i32.const 1
+    else     
+     local.get $4
+     i32.const 32
+     i32.eq
+    end
+    if (result i32)
+     i32.const 1
+    else     
+     local.get $4
+     i32.const 9
+     i32.eq
+    end
+   else    
+    i32.const 0
+   end
+   if
+    local.get $3
+    i32.const 1
+    i32.add
+    local.set $3
+    local.get $1
+    i32.const 1
+    i32.add
+    local.set $1
+    br $continue|0
+   end
+  end
+  local.get $3
+ )
+ (func $~lib/string/String.fromCharCode (; 61 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   local.get $1
   i32.const -1
@@ -3055,7 +3110,7 @@
   local.get $2
   call $~lib/rt/pure/__retain
  )
- (func $~lib/string/String.fromCharCode|trampoline (; 59 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/string/String.fromCharCode|trampoline (; 62 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   (local $1 i32)
   block $1of1
    block $0of1
@@ -3074,7 +3129,7 @@
   local.get $1
   call $~lib/string/String.fromCharCode
  )
- (func $~lib/string/String#concat (; 60 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/string/String#concat (; 63 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (local $3 i32)
   (local $4 i32)
@@ -3085,16 +3140,16 @@
   i32.eqz
   if
    local.get $1
-   i32.const 664
+   i32.const 680
    i32.ne
    if
-    i32.const 664
+    i32.const 680
     call $~lib/rt/pure/__retain
     drop
     local.get $1
     call $~lib/rt/pure/__release
    end
-   i32.const 664
+   i32.const 680
    local.set $1
   end
   local.get $1
@@ -3119,7 +3174,7 @@
   local.tee $2
   i32.eqz
   if
-   i32.const 688
+   i32.const 704
    call $~lib/rt/pure/__retain
    local.get $1
    call $~lib/rt/pure/__release
@@ -3143,7 +3198,7 @@
   call $~lib/rt/pure/__release
   local.get $2
  )
- (func $~lib/string/String.__concat (; 61 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/string/String.__concat (; 64 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   local.get $0
   call $~lib/rt/pure/__retain
@@ -3152,7 +3207,7 @@
   call $~lib/rt/pure/__retain
   drop
   local.get $0
-  i32.const 664
+  i32.const 680
   local.get $0
   select
   local.get $1
@@ -3162,7 +3217,7 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $~lib/util/number/decimalCount32 (; 62 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/util/number/decimalCount32 (; 65 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   local.get $0
   i32.const 100000
   i32.lt_u
@@ -3216,10 +3271,10 @@
    end
   end
  )
- (func $~lib/util/number/utoa32_lut (; 63 ;) (type $FUNCSIG$viii) (param $0 i32) (param $1 i32) (param $2 i32)
+ (func $~lib/util/number/utoa32_lut (; 66 ;) (type $FUNCSIG$viii) (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
   (local $4 i32)
-  i32.const 1148
+  i32.const 1164
   i32.load
   local.set $3
   loop $continue|0
@@ -3327,7 +3382,7 @@
    i32.store16
   end
  )
- (func $~lib/util/number/itoa32 (; 64 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/util/number/itoa32 (; 67 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
@@ -3370,7 +3425,7 @@
   local.get $2
   call $~lib/rt/pure/__retain
  )
- (func $~lib/number/I32#toString (; 65 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/number/I32#toString (; 68 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   (local $1 i32)
   local.get $0
   call $~lib/util/number/itoa32
@@ -3379,7 +3434,7 @@
   local.get $0
   call $~lib/rt/pure/__release
  )
- (func $assembly/json/JBool/JBool#constructor (; 66 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $assembly/json/JBool/JBool#constructor (; 69 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   (local $1 i32)
   i32.const 5
   i32.const 5
@@ -3391,7 +3446,538 @@
   i32.store8 offset=4
   local.get $1
  )
- (func $~lib/arraybuffer/ArrayBufferView#constructor (; 67 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $assembly/decoder/parse/parseTrue/parseTrue (; 70 ;) (type $FUNCSIG$iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  local.get $1
+  i32.const 1
+  i32.add
+  local.tee $1
+  local.get $0
+  i32.add
+  i32.load8_u
+  local.tee $3
+  i32.const 114
+  i32.ne
+  if
+   i32.const 1
+   global.set $~lib/argc
+   i32.const 600
+   local.get $3
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $0
+   call $~lib/string/String.__concat
+   local.tee $2
+   i32.const 720
+   call $~lib/string/String.__concat
+   local.tee $3
+   local.get $1
+   call $~lib/number/I32#toString
+   local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
+   call $~lib/rt/pure/__retain
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $2
+   call $~lib/rt/pure/__release
+   local.get $3
+   call $~lib/rt/pure/__release
+   local.get $1
+   call $~lib/rt/pure/__release
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1216
+   i32.const 15
+   i32.const 32
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  i32.const 1
+  i32.add
+  local.tee $1
+  local.get $0
+  i32.add
+  i32.load8_u
+  local.tee $3
+  i32.const 117
+  i32.ne
+  if
+   i32.const 1
+   global.set $~lib/argc
+   i32.const 600
+   local.get $3
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $0
+   call $~lib/string/String.__concat
+   local.tee $2
+   i32.const 720
+   call $~lib/string/String.__concat
+   local.tee $3
+   local.get $1
+   call $~lib/number/I32#toString
+   local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
+   call $~lib/rt/pure/__retain
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $2
+   call $~lib/rt/pure/__release
+   local.get $3
+   call $~lib/rt/pure/__release
+   local.get $1
+   call $~lib/rt/pure/__release
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1216
+   i32.const 20
+   i32.const 32
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  local.get $1
+  i32.const 1
+  i32.add
+  local.tee $0
+  i32.add
+  i32.load8_u
+  local.tee $1
+  i32.const 101
+  i32.ne
+  if
+   i32.const 1
+   global.set $~lib/argc
+   i32.const 600
+   local.get $1
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $2
+   i32.const 720
+   call $~lib/string/String.__concat
+   local.tee $3
+   local.get $0
+   call $~lib/number/I32#toString
+   local.tee $0
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
+   call $~lib/rt/pure/__retain
+   local.get $1
+   call $~lib/rt/pure/__release
+   local.get $2
+   call $~lib/rt/pure/__release
+   local.get $3
+   call $~lib/rt/pure/__release
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1216
+   i32.const 25
+   i32.const 32
+   call $~lib/builtins/abort
+   unreachable
+  end
+  i32.const 1
+  call $assembly/json/JBool/JBool#constructor
+  local.tee $0
+  local.get $2
+  i32.const 4
+  i32.add
+  i32.store
+  local.get $0
+ )
+ (func $assembly/decoder/parse/parseFalse/parseFalse (; 71 ;) (type $FUNCSIG$iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  local.get $1
+  i32.const 1
+  i32.add
+  local.tee $1
+  local.get $0
+  i32.add
+  i32.load8_u
+  local.tee $3
+  i32.const 97
+  i32.ne
+  if
+   i32.const 1
+   global.set $~lib/argc
+   i32.const 600
+   local.get $3
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $0
+   call $~lib/string/String.__concat
+   local.tee $2
+   i32.const 720
+   call $~lib/string/String.__concat
+   local.tee $3
+   local.get $1
+   call $~lib/number/I32#toString
+   local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
+   call $~lib/rt/pure/__retain
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $2
+   call $~lib/rt/pure/__release
+   local.get $3
+   call $~lib/rt/pure/__release
+   local.get $1
+   call $~lib/rt/pure/__release
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1304
+   i32.const 14
+   i32.const 32
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  i32.const 1
+  i32.add
+  local.tee $1
+  local.get $0
+  i32.add
+  i32.load8_u
+  local.tee $3
+  i32.const 108
+  i32.ne
+  if
+   i32.const 1
+   global.set $~lib/argc
+   i32.const 600
+   local.get $3
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $0
+   call $~lib/string/String.__concat
+   local.tee $2
+   i32.const 720
+   call $~lib/string/String.__concat
+   local.tee $3
+   local.get $1
+   call $~lib/number/I32#toString
+   local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
+   call $~lib/rt/pure/__retain
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $2
+   call $~lib/rt/pure/__release
+   local.get $3
+   call $~lib/rt/pure/__release
+   local.get $1
+   call $~lib/rt/pure/__release
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1304
+   i32.const 19
+   i32.const 32
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  i32.const 1
+  i32.add
+  local.tee $1
+  local.get $0
+  i32.add
+  i32.load8_u
+  local.tee $3
+  i32.const 115
+  i32.ne
+  if
+   i32.const 1
+   global.set $~lib/argc
+   i32.const 600
+   local.get $3
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $0
+   call $~lib/string/String.__concat
+   local.tee $2
+   i32.const 720
+   call $~lib/string/String.__concat
+   local.tee $3
+   local.get $1
+   call $~lib/number/I32#toString
+   local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
+   call $~lib/rt/pure/__retain
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $2
+   call $~lib/rt/pure/__release
+   local.get $3
+   call $~lib/rt/pure/__release
+   local.get $1
+   call $~lib/rt/pure/__release
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1304
+   i32.const 24
+   i32.const 32
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  local.get $1
+  i32.const 1
+  i32.add
+  local.tee $0
+  i32.add
+  i32.load8_u
+  local.tee $1
+  i32.const 101
+  i32.ne
+  if
+   i32.const 1
+   global.set $~lib/argc
+   i32.const 600
+   local.get $1
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $2
+   i32.const 720
+   call $~lib/string/String.__concat
+   local.tee $3
+   local.get $0
+   call $~lib/number/I32#toString
+   local.tee $0
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
+   call $~lib/rt/pure/__retain
+   local.get $1
+   call $~lib/rt/pure/__release
+   local.get $2
+   call $~lib/rt/pure/__release
+   local.get $3
+   call $~lib/rt/pure/__release
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1304
+   i32.const 29
+   i32.const 32
+   call $~lib/builtins/abort
+   unreachable
+  end
+  i32.const 0
+  call $assembly/json/JBool/JBool#constructor
+  local.tee $0
+  local.get $2
+  i32.const 5
+  i32.add
+  i32.store
+  local.get $0
+ )
+ (func $assembly/decoder/parse/parseNull/parseNull (; 72 ;) (type $FUNCSIG$iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  local.get $1
+  i32.const 1
+  i32.add
+  local.tee $1
+  local.get $0
+  i32.add
+  i32.load8_u
+  local.tee $3
+  i32.const 117
+  i32.ne
+  if
+   i32.const 1
+   global.set $~lib/argc
+   i32.const 600
+   local.get $3
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $0
+   call $~lib/string/String.__concat
+   local.tee $2
+   i32.const 720
+   call $~lib/string/String.__concat
+   local.tee $3
+   local.get $1
+   call $~lib/number/I32#toString
+   local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
+   call $~lib/rt/pure/__retain
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $2
+   call $~lib/rt/pure/__release
+   local.get $3
+   call $~lib/rt/pure/__release
+   local.get $1
+   call $~lib/rt/pure/__release
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1392
+   i32.const 13
+   i32.const 32
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $1
+  i32.const 1
+  i32.add
+  local.tee $1
+  local.get $0
+  i32.add
+  i32.load8_u
+  local.tee $3
+  i32.const 108
+  i32.ne
+  if
+   i32.const 1
+   global.set $~lib/argc
+   i32.const 600
+   local.get $3
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $0
+   call $~lib/string/String.__concat
+   local.tee $2
+   i32.const 720
+   call $~lib/string/String.__concat
+   local.tee $3
+   local.get $1
+   call $~lib/number/I32#toString
+   local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
+   call $~lib/rt/pure/__retain
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $2
+   call $~lib/rt/pure/__release
+   local.get $3
+   call $~lib/rt/pure/__release
+   local.get $1
+   call $~lib/rt/pure/__release
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1392
+   i32.const 17
+   i32.const 32
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  local.get $1
+  i32.const 1
+  i32.add
+  local.tee $0
+  i32.add
+  i32.load8_u
+  local.tee $1
+  i32.const 108
+  i32.ne
+  if
+   i32.const 1
+   global.set $~lib/argc
+   i32.const 600
+   local.get $1
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $2
+   i32.const 720
+   call $~lib/string/String.__concat
+   local.tee $3
+   local.get $0
+   call $~lib/number/I32#toString
+   local.tee $0
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
+   call $~lib/rt/pure/__retain
+   local.get $1
+   call $~lib/rt/pure/__release
+   local.get $2
+   call $~lib/rt/pure/__release
+   local.get $3
+   call $~lib/rt/pure/__release
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1392
+   i32.const 21
+   i32.const 32
+   call $~lib/builtins/abort
+   unreachable
+  end
+  call $assembly/json/JNull/JNull#constructor
+  local.tee $0
+  local.get $2
+  i32.const 4
+  i32.add
+  i32.store
+  local.get $0
+ )
+ (func $~lib/arraybuffer/ArrayBufferView#constructor (; 73 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
   i32.const 0
@@ -3439,7 +4025,22 @@
   i32.store offset=8
   local.get $0
  )
- (func $~lib/rt/tlsf/reallocateBlock (; 68 ;) (type $FUNCSIG$iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+ (func $~lib/array/Array<~lib/string/String>#constructor (; 74 ;) (type $FUNCSIG$i) (result i32)
+  (local $0 i32)
+  i32.const 16
+  i32.const 8
+  call $~lib/rt/tlsf/__alloc
+  call $~lib/rt/pure/__retain
+  call $~lib/arraybuffer/ArrayBufferView#constructor
+  local.tee $0
+  i32.const 0
+  i32.store offset=12
+  local.get $0
+  i32.const 0
+  i32.store offset=12
+  local.get $0
+ )
+ (func $~lib/rt/tlsf/reallocateBlock (; 75 ;) (type $FUNCSIG$iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (local $3 i32)
   (local $4 i32)
   (local $5 i32)
@@ -3553,7 +4154,7 @@
   call $~lib/rt/tlsf/insertBlock
   local.get $3
  )
- (func $~lib/rt/tlsf/__realloc (; 69 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/rt/tlsf/__realloc (; 76 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
   global.get $~lib/rt/tlsf/ROOT
   i32.eqz
   if
@@ -3589,7 +4190,7 @@
   i32.const 16
   i32.add
  )
- (func $~lib/memory/memory.fill (; 70 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/memory/memory.fill (; 77 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   block $~lib/util/memory/memset|inlined.0
    local.get $1
@@ -3798,7 +4399,7 @@
    end
   end
  )
- (func $~lib/array/ensureSize (; 71 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/array/ensureSize (; 78 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
   (local $4 i32)
@@ -3814,8 +4415,8 @@
    i32.const 268435452
    i32.gt_u
    if
-    i32.const 1200
-    i32.const 1416
+    i32.const 1480
+    i32.const 1696
     i32.const 14
     i32.const 47
     call $~lib/builtins/abort
@@ -3853,7 +4454,7 @@
    i32.store offset=8
   end
  )
- (func $~lib/array/Array<~lib/string/String>#push (; 72 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<~lib/string/String>#push (; 79 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
   local.get $1
@@ -3882,7 +4483,7 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $~lib/array/Array<~lib/string/String>#join_str (; 73 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/array/Array<~lib/string/String>#join_str (; 80 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
@@ -3890,7 +4491,7 @@
   (local $5 i32)
   (local $6 i32)
   (local $7 i32)
-  i32.const 688
+  i32.const 704
   call $~lib/rt/pure/__retain
   drop
   local.get $0
@@ -3901,9 +4502,9 @@
   i32.const 0
   i32.lt_s
   if
-   i32.const 688
+   i32.const 704
    call $~lib/rt/pure/__retain
-   i32.const 688
+   i32.const 704
    call $~lib/rt/pure/__release
    return
   end
@@ -3916,11 +4517,11 @@
    local.get $6
    i32.load
    call $~lib/rt/pure/__retain
-   i32.const 688
+   i32.const 704
    call $~lib/rt/pure/__release
    return
   end
-  i32.const 684
+  i32.const 700
   i32.load
   i32.const 1
   i32.shr_u
@@ -4041,7 +4642,7 @@
      i32.shl
      local.get $3
      i32.add
-     i32.const 688
+     i32.const 704
      local.get $7
      i32.const 1
      i32.shl
@@ -4092,13 +4693,13 @@
    i32.shl
    call $~lib/memory/memory.copy
   end
-  i32.const 688
+  i32.const 704
   call $~lib/rt/pure/__release
   local.get $2
   call $~lib/rt/pure/__release
   local.get $3
  )
- (func $~lib/util/string/isWhiteSpaceOrLineTerminator (; 74 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/util/string/isWhiteSpaceOrLineTerminator (; 81 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   block $case10|0
    block $case9|0
     local.get $0
@@ -4148,7 +4749,7 @@
   end
   i32.const 0
  )
- (func $~lib/util/string/strtod (; 75 ;) (type $FUNCSIG$di) (param $0 i32) (result f64)
+ (func $~lib/util/string/strtod (; 82 ;) (type $FUNCSIG$di) (param $0 i32) (result f64)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
@@ -4274,7 +4875,7 @@
         end
         if
          i32.const 0
-         i32.const 1728
+         i32.const 1912
          i32.const 173
          i32.const 10
          call $~lib/builtins/abort
@@ -4339,678 +4940,40 @@
   call $~lib/rt/pure/__release
   f64.const nan:0x8000000000000
  )
- (func $assembly/decoder/JSONDecoder/JSONDecoder.parseJValue (; 76 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
+ (func $assembly/decoder/parse/parseNumber/parseNumber (; 83 ;) (type $FUNCSIG$iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (local $3 i32)
   (local $4 i32)
   (local $5 i32)
   (local $6 i32)
   (local $7 f64)
-  loop $continue|0
-   local.get $4
-   local.get $1
-   i32.lt_s
-   if (result i32)
-    local.get $0
-    local.get $4
-    i32.add
-    i32.load8_u
-    local.tee $2
-    i32.const 13
-    i32.eq
-    if (result i32)
-     i32.const 1
-    else     
-     local.get $2
-     i32.const 10
-     i32.eq
-    end
-    if (result i32)
-     i32.const 1
-    else     
-     local.get $2
-     i32.const 32
-     i32.eq
-    end
-    if (result i32)
-     i32.const 1
-    else     
-     local.get $2
-     i32.const 9
-     i32.eq
-    end
-   else    
-    i32.const 0
-   end
-   if
-    local.get $5
-    i32.const 1
-    i32.add
-    local.set $5
-    local.get $4
-    i32.const 1
-    i32.add
-    local.set $4
-    br $continue|0
-   end
-  end
-  local.get $1
-  local.get $5
-  local.tee $1
-  i32.eq
-  if
-   i32.const 400
-   i32.const 504
-   i32.const 42
-   i32.const 22
-   call $~lib/builtins/abort
-   unreachable
-  end
+  call $~lib/array/Array<~lib/string/String>#constructor
+  local.set $4
   local.get $0
   local.get $1
   i32.add
   i32.load8_u
-  local.tee $2
-  i32.const 116
-  i32.eq
-  if
-   local.get $0
-   local.get $1
-   i32.add
-   i32.const 1
-   i32.add
-   i32.load8_u
-   local.tee $2
-   i32.const 114
-   i32.ne
-   if
-    local.get $1
-    i32.const 1
-    i32.add
-    local.set $0
-    i32.const 1
-    global.set $~lib/argc
-    i32.const 584
-    local.get $2
-    call $~lib/string/String.fromCharCode|trampoline
-    local.tee $1
-    call $~lib/string/String.__concat
-    local.tee $2
-    i32.const 704
-    call $~lib/string/String.__concat
-    local.tee $5
-    local.get $0
-    call $~lib/number/I32#toString
-    local.tee $0
-    call $~lib/string/String.__concat
-    local.tee $3
-    i32.const 1176
-    call $~lib/string/String.__concat
-    local.tee $4
-    call $~lib/rt/pure/__retain
-    local.get $1
-    call $~lib/rt/pure/__release
-    local.get $2
-    call $~lib/rt/pure/__release
-    local.get $5
-    call $~lib/rt/pure/__release
-    local.get $0
-    call $~lib/rt/pure/__release
-    local.get $3
-    call $~lib/rt/pure/__release
-    local.get $4
-    call $~lib/rt/pure/__release
-    i32.const 504
-    i32.const 132
-    i32.const 35
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.get $0
-   local.get $1
-   i32.add
-   i32.const 2
-   i32.add
-   i32.load8_u
-   local.tee $2
-   i32.const 117
-   i32.ne
-   if
-    local.get $1
-    i32.const 2
-    i32.add
-    local.set $0
-    i32.const 1
-    global.set $~lib/argc
-    i32.const 584
-    local.get $2
-    call $~lib/string/String.fromCharCode|trampoline
-    local.tee $1
-    call $~lib/string/String.__concat
-    local.tee $2
-    i32.const 704
-    call $~lib/string/String.__concat
-    local.tee $5
-    local.get $0
-    call $~lib/number/I32#toString
-    local.tee $0
-    call $~lib/string/String.__concat
-    local.tee $3
-    i32.const 1176
-    call $~lib/string/String.__concat
-    local.tee $4
-    call $~lib/rt/pure/__retain
-    local.get $1
-    call $~lib/rt/pure/__release
-    local.get $2
-    call $~lib/rt/pure/__release
-    local.get $5
-    call $~lib/rt/pure/__release
-    local.get $0
-    call $~lib/rt/pure/__release
-    local.get $3
-    call $~lib/rt/pure/__release
-    local.get $4
-    call $~lib/rt/pure/__release
-    i32.const 504
-    i32.const 134
-    i32.const 35
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.get $0
-   local.get $1
-   i32.add
-   i32.const 3
-   i32.add
-   i32.load8_u
-   local.tee $0
-   i32.const 101
-   i32.ne
-   if
-    local.get $1
-    i32.const 3
-    i32.add
-    local.set $1
-    i32.const 1
-    global.set $~lib/argc
-    i32.const 584
-    local.get $0
-    call $~lib/string/String.fromCharCode|trampoline
-    local.tee $0
-    call $~lib/string/String.__concat
-    local.tee $2
-    i32.const 704
-    call $~lib/string/String.__concat
-    local.tee $5
-    local.get $1
-    call $~lib/number/I32#toString
-    local.tee $1
-    call $~lib/string/String.__concat
-    local.tee $3
-    i32.const 1176
-    call $~lib/string/String.__concat
-    local.tee $4
-    call $~lib/rt/pure/__retain
-    local.get $0
-    call $~lib/rt/pure/__release
-    local.get $2
-    call $~lib/rt/pure/__release
-    local.get $5
-    call $~lib/rt/pure/__release
-    local.get $1
-    call $~lib/rt/pure/__release
-    local.get $3
-    call $~lib/rt/pure/__release
-    local.get $4
-    call $~lib/rt/pure/__release
-    i32.const 504
-    i32.const 136
-    i32.const 35
-    call $~lib/builtins/abort
-    unreachable
-   end
-   i32.const 1
-   call $assembly/json/JBool/JBool#constructor
-   local.tee $0
-   local.get $5
-   i32.const 4
-   i32.add
-   i32.store
-   local.get $0
-   return
-  end
-  local.get $2
-  i32.const 102
-  i32.eq
-  if
-   local.get $0
-   local.get $1
-   i32.add
-   i32.const 1
-   i32.add
-   i32.load8_u
-   local.tee $2
-   i32.const 97
-   i32.ne
-   if
-    local.get $1
-    i32.const 1
-    i32.add
-    local.set $0
-    i32.const 1
-    global.set $~lib/argc
-    i32.const 584
-    local.get $2
-    call $~lib/string/String.fromCharCode|trampoline
-    local.tee $1
-    call $~lib/string/String.__concat
-    local.tee $2
-    i32.const 704
-    call $~lib/string/String.__concat
-    local.tee $5
-    local.get $0
-    call $~lib/number/I32#toString
-    local.tee $0
-    call $~lib/string/String.__concat
-    local.tee $3
-    i32.const 1176
-    call $~lib/string/String.__concat
-    local.tee $4
-    call $~lib/rt/pure/__retain
-    local.get $1
-    call $~lib/rt/pure/__release
-    local.get $2
-    call $~lib/rt/pure/__release
-    local.get $5
-    call $~lib/rt/pure/__release
-    local.get $0
-    call $~lib/rt/pure/__release
-    local.get $3
-    call $~lib/rt/pure/__release
-    local.get $4
-    call $~lib/rt/pure/__release
-    i32.const 504
-    i32.const 111
-    i32.const 35
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.get $0
-   local.get $1
-   i32.add
-   i32.const 2
-   i32.add
-   i32.load8_u
-   local.tee $2
-   i32.const 108
-   i32.ne
-   if
-    local.get $1
-    i32.const 2
-    i32.add
-    local.set $0
-    i32.const 1
-    global.set $~lib/argc
-    i32.const 584
-    local.get $2
-    call $~lib/string/String.fromCharCode|trampoline
-    local.tee $1
-    call $~lib/string/String.__concat
-    local.tee $2
-    i32.const 704
-    call $~lib/string/String.__concat
-    local.tee $5
-    local.get $0
-    call $~lib/number/I32#toString
-    local.tee $0
-    call $~lib/string/String.__concat
-    local.tee $3
-    i32.const 1176
-    call $~lib/string/String.__concat
-    local.tee $4
-    call $~lib/rt/pure/__retain
-    local.get $1
-    call $~lib/rt/pure/__release
-    local.get $2
-    call $~lib/rt/pure/__release
-    local.get $5
-    call $~lib/rt/pure/__release
-    local.get $0
-    call $~lib/rt/pure/__release
-    local.get $3
-    call $~lib/rt/pure/__release
-    local.get $4
-    call $~lib/rt/pure/__release
-    i32.const 504
-    i32.const 113
-    i32.const 35
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.get $0
-   local.get $1
-   i32.add
-   i32.const 3
-   i32.add
-   i32.load8_u
-   local.tee $2
-   i32.const 115
-   i32.ne
-   if
-    local.get $1
-    i32.const 3
-    i32.add
-    local.set $0
-    i32.const 1
-    global.set $~lib/argc
-    i32.const 584
-    local.get $2
-    call $~lib/string/String.fromCharCode|trampoline
-    local.tee $1
-    call $~lib/string/String.__concat
-    local.tee $2
-    i32.const 704
-    call $~lib/string/String.__concat
-    local.tee $5
-    local.get $0
-    call $~lib/number/I32#toString
-    local.tee $0
-    call $~lib/string/String.__concat
-    local.tee $3
-    i32.const 1176
-    call $~lib/string/String.__concat
-    local.tee $4
-    call $~lib/rt/pure/__retain
-    local.get $1
-    call $~lib/rt/pure/__release
-    local.get $2
-    call $~lib/rt/pure/__release
-    local.get $5
-    call $~lib/rt/pure/__release
-    local.get $0
-    call $~lib/rt/pure/__release
-    local.get $3
-    call $~lib/rt/pure/__release
-    local.get $4
-    call $~lib/rt/pure/__release
-    i32.const 504
-    i32.const 115
-    i32.const 35
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.get $0
-   local.get $1
-   i32.add
-   i32.const 4
-   i32.add
-   i32.load8_u
-   local.tee $0
-   i32.const 101
-   i32.ne
-   if
-    local.get $1
-    i32.const 4
-    i32.add
-    local.set $1
-    i32.const 1
-    global.set $~lib/argc
-    i32.const 584
-    local.get $0
-    call $~lib/string/String.fromCharCode|trampoline
-    local.tee $0
-    call $~lib/string/String.__concat
-    local.tee $2
-    i32.const 704
-    call $~lib/string/String.__concat
-    local.tee $5
-    local.get $1
-    call $~lib/number/I32#toString
-    local.tee $1
-    call $~lib/string/String.__concat
-    local.tee $3
-    i32.const 1176
-    call $~lib/string/String.__concat
-    local.tee $4
-    call $~lib/rt/pure/__retain
-    local.get $0
-    call $~lib/rt/pure/__release
-    local.get $2
-    call $~lib/rt/pure/__release
-    local.get $5
-    call $~lib/rt/pure/__release
-    local.get $1
-    call $~lib/rt/pure/__release
-    local.get $3
-    call $~lib/rt/pure/__release
-    local.get $4
-    call $~lib/rt/pure/__release
-    i32.const 504
-    i32.const 117
-    i32.const 35
-    call $~lib/builtins/abort
-    unreachable
-   end
-   i32.const 0
-   call $assembly/json/JBool/JBool#constructor
-   local.tee $0
-   local.get $5
-   i32.const 5
-   i32.add
-   i32.store
-   local.get $0
-   return
-  end
-  local.get $2
-  i32.const 110
-  i32.eq
-  if
-   local.get $0
-   local.get $1
-   i32.add
-   i32.const 1
-   i32.add
-   i32.load8_u
-   local.tee $2
-   i32.const 117
-   i32.ne
-   if
-    local.get $1
-    i32.const 1
-    i32.add
-    local.set $0
-    i32.const 1
-    global.set $~lib/argc
-    i32.const 584
-    local.get $2
-    call $~lib/string/String.fromCharCode|trampoline
-    local.tee $1
-    call $~lib/string/String.__concat
-    local.tee $2
-    i32.const 704
-    call $~lib/string/String.__concat
-    local.tee $5
-    local.get $0
-    call $~lib/number/I32#toString
-    local.tee $0
-    call $~lib/string/String.__concat
-    local.tee $3
-    i32.const 1176
-    call $~lib/string/String.__concat
-    local.tee $4
-    call $~lib/rt/pure/__retain
-    local.get $1
-    call $~lib/rt/pure/__release
-    local.get $2
-    call $~lib/rt/pure/__release
-    local.get $5
-    call $~lib/rt/pure/__release
-    local.get $0
-    call $~lib/rt/pure/__release
-    local.get $3
-    call $~lib/rt/pure/__release
-    local.get $4
-    call $~lib/rt/pure/__release
-    i32.const 504
-    i32.const 151
-    i32.const 35
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.get $0
-   local.get $1
-   i32.add
-   i32.const 2
-   i32.add
-   i32.load8_u
-   local.tee $2
-   i32.const 108
-   i32.ne
-   if
-    local.get $1
-    i32.const 2
-    i32.add
-    local.set $0
-    i32.const 1
-    global.set $~lib/argc
-    i32.const 584
-    local.get $2
-    call $~lib/string/String.fromCharCode|trampoline
-    local.tee $1
-    call $~lib/string/String.__concat
-    local.tee $2
-    i32.const 704
-    call $~lib/string/String.__concat
-    local.tee $5
-    local.get $0
-    call $~lib/number/I32#toString
-    local.tee $0
-    call $~lib/string/String.__concat
-    local.tee $3
-    i32.const 1176
-    call $~lib/string/String.__concat
-    local.tee $4
-    call $~lib/rt/pure/__retain
-    local.get $1
-    call $~lib/rt/pure/__release
-    local.get $2
-    call $~lib/rt/pure/__release
-    local.get $5
-    call $~lib/rt/pure/__release
-    local.get $0
-    call $~lib/rt/pure/__release
-    local.get $3
-    call $~lib/rt/pure/__release
-    local.get $4
-    call $~lib/rt/pure/__release
-    i32.const 504
-    i32.const 153
-    i32.const 35
-    call $~lib/builtins/abort
-    unreachable
-   end
-   local.get $0
-   local.get $1
-   i32.add
-   i32.const 3
-   i32.add
-   i32.load8_u
-   local.tee $0
-   i32.const 108
-   i32.ne
-   if
-    local.get $1
-    i32.const 3
-    i32.add
-    local.set $1
-    i32.const 1
-    global.set $~lib/argc
-    i32.const 584
-    local.get $0
-    call $~lib/string/String.fromCharCode|trampoline
-    local.tee $0
-    call $~lib/string/String.__concat
-    local.tee $2
-    i32.const 704
-    call $~lib/string/String.__concat
-    local.tee $5
-    local.get $1
-    call $~lib/number/I32#toString
-    local.tee $1
-    call $~lib/string/String.__concat
-    local.tee $3
-    i32.const 1176
-    call $~lib/string/String.__concat
-    local.tee $4
-    call $~lib/rt/pure/__retain
-    local.get $0
-    call $~lib/rt/pure/__release
-    local.get $2
-    call $~lib/rt/pure/__release
-    local.get $5
-    call $~lib/rt/pure/__release
-    local.get $1
-    call $~lib/rt/pure/__release
-    local.get $3
-    call $~lib/rt/pure/__release
-    local.get $4
-    call $~lib/rt/pure/__release
-    i32.const 504
-    i32.const 155
-    i32.const 35
-    call $~lib/builtins/abort
-    unreachable
-   end
-   call $assembly/json/JNull/JNull#constructor
-   local.tee $0
-   local.get $5
-   i32.const 4
-   i32.add
-   i32.store
-   local.get $0
-   return
-  end
-  i32.const 1
-  local.get $2
+  local.tee $3
   i32.const 43
   i32.eq
-  i32.const 1
-  local.get $2
-  i32.const 45
-  i32.eq
-  local.get $2
-  i32.const 57
-  i32.le_s
-  i32.const 0
-  local.get $2
-  i32.const 48
-  i32.ge_s
-  select
-  select
-  select
   if
-   i32.const 16
-   i32.const 8
-   call $~lib/rt/tlsf/__alloc
-   call $~lib/rt/pure/__retain
-   call $~lib/arraybuffer/ArrayBufferView#constructor
-   local.tee $2
-   i32.const 0
-   i32.store offset=12
-   local.get $2
-   i32.const 0
-   i32.store offset=12
-   local.get $0
+   local.get $4
+   i32.const 1744
+   call $~lib/array/Array<~lib/string/String>#push
    local.get $1
+   i32.const 1
+   i32.add
+   local.tee $1
+   local.get $0
    i32.add
    i32.load8_u
-   local.tee $4
-   i32.const 43
+   local.set $3
+  else   
+   local.get $3
+   i32.const 45
    i32.eq
-   if (result i32)
-    local.get $2
-    i32.const 1464
+   if
+    local.get $4
+    i32.const 1768
     call $~lib/array/Array<~lib/string/String>#push
     local.get $1
     i32.const 1
@@ -5019,13 +4982,218 @@
     local.get $0
     i32.add
     i32.load8_u
+    local.set $3
+   end
+  end
+  local.get $3
+  i32.const 48
+  i32.eq
+  if
+   local.get $4
+   i32.const 376
+   call $~lib/array/Array<~lib/string/String>#push
+   local.get $1
+   i32.const 1
+   i32.add
+   local.tee $1
+   local.get $0
+   i32.add
+   i32.load8_u
+   local.set $3
+  else   
+   local.get $3
+   i32.const 57
+   i32.le_s
+   i32.const 0
+   local.get $3
+   i32.const 48
+   i32.ge_s
+   select
+   if
+    i32.const 1
+    global.set $~lib/argc
+    local.get $4
+    local.get $3
+    call $~lib/string/String.fromCharCode|trampoline
+    local.tee $5
+    call $~lib/array/Array<~lib/string/String>#push
+    local.get $1
+    i32.const 1
+    i32.add
+    local.tee $1
+    local.get $0
+    i32.add
+    i32.load8_u
+    local.set $3
+    loop $continue|0
+     local.get $3
+     i32.const 57
+     i32.le_s
+     i32.const 0
+     local.get $3
+     i32.const 48
+     i32.ge_s
+     select
+     if
+      i32.const 1
+      global.set $~lib/argc
+      local.get $4
+      local.get $3
+      call $~lib/string/String.fromCharCode|trampoline
+      local.tee $6
+      call $~lib/array/Array<~lib/string/String>#push
+      local.get $1
+      i32.const 1
+      i32.add
+      local.tee $1
+      local.get $0
+      i32.add
+      i32.load8_u
+      local.set $3
+      local.get $6
+      call $~lib/rt/pure/__release
+      br $continue|0
+     end
+    end
+    local.get $5
+    call $~lib/rt/pure/__release
    else    
     local.get $4
-    i32.const 45
-    i32.eq
-    if (result i32)
-     local.get $2
-     i32.const 1488
+    call $~lib/rt/pure/__release
+    i32.const 1
+    global.set $~lib/argc
+    i32.const 600
+    local.get $3
+    call $~lib/string/String.fromCharCode|trampoline
+    local.tee $0
+    call $~lib/string/String.__concat
+    local.tee $2
+    i32.const 720
+    call $~lib/string/String.__concat
+    local.tee $3
+    local.get $1
+    call $~lib/number/I32#toString
+    local.tee $1
+    call $~lib/string/String.__concat
+    local.tee $4
+    i32.const 1192
+    call $~lib/string/String.__concat
+    local.tee $5
+    call $~lib/rt/pure/__retain
+    local.get $0
+    call $~lib/rt/pure/__release
+    local.get $2
+    call $~lib/rt/pure/__release
+    local.get $3
+    call $~lib/rt/pure/__release
+    local.get $1
+    call $~lib/rt/pure/__release
+    local.get $4
+    call $~lib/rt/pure/__release
+    local.get $5
+    call $~lib/rt/pure/__release
+    i32.const 1792
+    i32.const 48
+    i32.const 4
+    call $~lib/builtins/abort
+    unreachable
+   end
+  end
+  local.get $3
+  i32.const 46
+  i32.eq
+  if
+   local.get $4
+   i32.const 1192
+   call $~lib/array/Array<~lib/string/String>#push
+   local.get $1
+   i32.const 1
+   i32.add
+   local.tee $3
+   local.get $0
+   i32.add
+   i32.load8_u
+   local.tee $1
+   i32.const 57
+   i32.le_s
+   i32.const 0
+   local.get $1
+   i32.const 48
+   i32.ge_s
+   select
+   i32.eqz
+   if
+    local.get $4
+    call $~lib/rt/pure/__release
+    i32.const 1
+    global.set $~lib/argc
+    i32.const 600
+    local.get $1
+    call $~lib/string/String.fromCharCode|trampoline
+    local.tee $0
+    call $~lib/string/String.__concat
+    local.tee $1
+    i32.const 720
+    call $~lib/string/String.__concat
+    local.tee $2
+    local.get $3
+    call $~lib/number/I32#toString
+    local.tee $3
+    call $~lib/string/String.__concat
+    local.tee $4
+    i32.const 1192
+    call $~lib/string/String.__concat
+    local.tee $5
+    call $~lib/rt/pure/__retain
+    local.get $0
+    call $~lib/rt/pure/__release
+    local.get $1
+    call $~lib/rt/pure/__release
+    local.get $2
+    call $~lib/rt/pure/__release
+    local.get $3
+    call $~lib/rt/pure/__release
+    local.get $4
+    call $~lib/rt/pure/__release
+    local.get $5
+    call $~lib/rt/pure/__release
+    i32.const 1792
+    i32.const 58
+    i32.const 25
+    call $~lib/builtins/abort
+    unreachable
+   end
+   i32.const 1
+   global.set $~lib/argc
+   local.get $4
+   local.get $1
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $5
+   call $~lib/array/Array<~lib/string/String>#push
+   local.get $3
+   i32.const 1
+   i32.add
+   local.tee $1
+   local.get $0
+   i32.add
+   i32.load8_u
+   local.set $3
+   loop $continue|1
+    local.get $3
+    i32.const 57
+    i32.le_s
+    i32.const 0
+    local.get $3
+    i32.const 48
+    i32.ge_s
+    select
+    if
+     i32.const 1
+     global.set $~lib/argc
+     local.get $4
+     local.get $3
+     call $~lib/string/String.fromCharCode|trampoline
+     local.tee $6
      call $~lib/array/Array<~lib/string/String>#push
      local.get $1
      i32.const 1
@@ -5034,114 +5202,57 @@
      local.get $0
      i32.add
      i32.load8_u
-    else     
-     local.get $4
+     local.set $3
+     local.get $6
+     call $~lib/rt/pure/__release
+     br $continue|1
     end
    end
-   local.tee $4
-   i32.const 48
+   local.get $5
+   call $~lib/rt/pure/__release
+  end
+  i32.const 1
+  local.get $3
+  i32.const 101
+  i32.eq
+  local.get $3
+  i32.const 69
+  i32.eq
+  select
+  if
+   local.get $4
+   i32.const 1888
+   call $~lib/array/Array<~lib/string/String>#push
+   local.get $1
+   i32.const 1
+   i32.add
+   local.tee $1
+   local.get $0
+   i32.add
+   i32.load8_u
+   local.tee $3
+   i32.const 43
    i32.eq
    if
-    local.get $2
-    i32.const 376
+    local.get $4
+    i32.const 1744
     call $~lib/array/Array<~lib/string/String>#push
     local.get $1
     i32.const 1
     i32.add
+    local.tee $1
     local.get $0
     i32.add
     i32.load8_u
-    drop
+    local.set $3
    else    
-    local.get $4
-    i32.const 57
-    i32.le_s
-    i32.const 0
-    local.get $4
-    i32.const 48
-    i32.ge_s
-    select
+    local.get $3
+    i32.const 45
+    i32.eq
     if
-     local.get $2
-     call $~lib/rt/pure/__retain
-     local.set $3
-     block $break|1
-      block $case9|1
-       block $case8|1
-        block $case7|1
-         block $case6|1
-          block $case5|1
-           block $case4|1
-            block $case3|1
-             block $case2|1
-              block $case1|1
-               local.get $4
-               i32.const 48
-               i32.ne
-               if
-                local.get $4
-                i32.const 49
-                i32.eq
-                br_if $case1|1
-                block $tablify|0
-                 local.get $4
-                 i32.const 50
-                 i32.sub
-                 br_table $case2|1 $case3|1 $case4|1 $case5|1 $case6|1 $case7|1 $case8|1 $case9|1 $tablify|0
-                end
-                br $break|1
-               end
-               local.get $3
-               i32.const 376
-               call $~lib/array/Array<~lib/string/String>#push
-               br $break|1
-              end
-              local.get $3
-              i32.const 1512
-              call $~lib/array/Array<~lib/string/String>#push
-              br $break|1
-             end
-             local.get $3
-             i32.const 1536
-             call $~lib/array/Array<~lib/string/String>#push
-             br $break|1
-            end
-            local.get $3
-            i32.const 1560
-            call $~lib/array/Array<~lib/string/String>#push
-            br $break|1
-           end
-           local.get $3
-           i32.const 1584
-           call $~lib/array/Array<~lib/string/String>#push
-           br $break|1
-          end
-          local.get $3
-          i32.const 1608
-          call $~lib/array/Array<~lib/string/String>#push
-          br $break|1
-         end
-         local.get $3
-         i32.const 1632
-         call $~lib/array/Array<~lib/string/String>#push
-         br $break|1
-        end
-        local.get $3
-        i32.const 1656
-        call $~lib/array/Array<~lib/string/String>#push
-        br $break|1
-       end
-       local.get $3
-       i32.const 1680
-       call $~lib/array/Array<~lib/string/String>#push
-       br $break|1
-      end
-      local.get $3
-      i32.const 1704
-      call $~lib/array/Array<~lib/string/String>#push
-     end
-     local.get $3
-     call $~lib/rt/pure/__release
+     local.get $4
+     i32.const 1768
+     call $~lib/array/Array<~lib/string/String>#push
      local.get $1
      i32.const 1
      i32.add
@@ -5149,323 +5260,306 @@
      local.get $0
      i32.add
      i32.load8_u
-     local.set $4
-     loop $continue|2
-      local.get $4
-      i32.const 57
-      i32.le_s
-      i32.const 0
-      local.get $4
-      i32.const 48
-      i32.ge_s
-      select
-      if
-       local.get $2
-       call $~lib/rt/pure/__retain
-       local.set $3
-       block $break|3
-        block $case9|3
-         block $case8|3
-          block $case7|3
-           block $case6|3
-            block $case5|3
-             block $case4|3
-              block $case3|3
-               block $case2|3
-                block $case1|3
-                 local.get $4
-                 i32.const 48
-                 i32.ne
-                 if
-                  local.get $4
-                  i32.const 49
-                  i32.eq
-                  br_if $case1|3
-                  block $tablify|00
-                   local.get $4
-                   i32.const 50
-                   i32.sub
-                   br_table $case2|3 $case3|3 $case4|3 $case5|3 $case6|3 $case7|3 $case8|3 $case9|3 $tablify|00
-                  end
-                  br $break|3
-                 end
-                 local.get $3
-                 i32.const 376
-                 call $~lib/array/Array<~lib/string/String>#push
-                 br $break|3
-                end
-                local.get $3
-                i32.const 1512
-                call $~lib/array/Array<~lib/string/String>#push
-                br $break|3
-               end
-               local.get $3
-               i32.const 1536
-               call $~lib/array/Array<~lib/string/String>#push
-               br $break|3
-              end
-              local.get $3
-              i32.const 1560
-              call $~lib/array/Array<~lib/string/String>#push
-              br $break|3
-             end
-             local.get $3
-             i32.const 1584
-             call $~lib/array/Array<~lib/string/String>#push
-             br $break|3
-            end
-            local.get $3
-            i32.const 1608
-            call $~lib/array/Array<~lib/string/String>#push
-            br $break|3
-           end
-           local.get $3
-           i32.const 1632
-           call $~lib/array/Array<~lib/string/String>#push
-           br $break|3
-          end
-          local.get $3
-          i32.const 1656
-          call $~lib/array/Array<~lib/string/String>#push
-          br $break|3
-         end
-         local.get $3
-         i32.const 1680
-         call $~lib/array/Array<~lib/string/String>#push
-         br $break|3
-        end
-        local.get $3
-        i32.const 1704
-        call $~lib/array/Array<~lib/string/String>#push
-       end
-       local.get $3
-       call $~lib/rt/pure/__release
-       local.get $1
-       i32.const 1
-       i32.add
-       local.tee $1
-       local.get $0
-       i32.add
-       i32.load8_u
-       local.set $4
-       br $continue|2
-      end
-     end
-    else     
-     local.get $2
-     call $~lib/rt/pure/__release
-     i32.const 1
-     global.set $~lib/argc
-     i32.const 584
-     local.get $4
-     call $~lib/string/String.fromCharCode|trampoline
-     local.tee $0
-     call $~lib/string/String.__concat
-     local.tee $2
-     i32.const 704
-     call $~lib/string/String.__concat
-     local.tee $5
-     local.get $1
-     call $~lib/number/I32#toString
-     local.tee $1
-     call $~lib/string/String.__concat
-     local.tee $3
-     i32.const 1176
-     call $~lib/string/String.__concat
-     local.tee $4
-     call $~lib/rt/pure/__retain
-     local.get $0
-     call $~lib/rt/pure/__release
-     local.get $2
-     call $~lib/rt/pure/__release
-     local.get $5
-     call $~lib/rt/pure/__release
-     local.get $1
-     call $~lib/rt/pure/__release
-     local.get $3
-     call $~lib/rt/pure/__release
-     local.get $4
-     call $~lib/rt/pure/__release
-     i32.const 504
-     i32.const 203
-     i32.const 4
-     call $~lib/builtins/abort
-     unreachable
+     local.set $3
     end
    end
-   i32.const 688
-   call $~lib/rt/pure/__retain
-   drop
-   local.get $2
-   call $~lib/array/Array<~lib/string/String>#join_str
-   local.set $0
-   i32.const 688
-   call $~lib/rt/pure/__release
-   local.get $0
-   call $~lib/rt/pure/__retain
-   drop
-   local.get $0
-   call $~lib/util/string/strtod
-   local.set $7
-   local.get $0
-   call $~lib/rt/pure/__release
-   i32.const 16
-   i32.const 7
-   call $~lib/rt/tlsf/__alloc
-   call $~lib/rt/pure/__retain
-   call $assembly/json/JValue/JValue#constructor
-   local.tee $1
-   local.get $7
-   f64.store offset=8
-   local.get $1
-   local.get $0
-   i32.const 16
-   i32.sub
-   i32.load offset=12
+   local.get $3
+   i32.const 57
+   i32.le_s
+   i32.const 0
+   local.get $3
+   i32.const 48
+   i32.ge_s
+   select
+   i32.eqz
+   if
+    local.get $4
+    call $~lib/rt/pure/__release
+    i32.const 1
+    global.set $~lib/argc
+    i32.const 600
+    local.get $3
+    call $~lib/string/String.fromCharCode|trampoline
+    local.tee $0
+    call $~lib/string/String.__concat
+    local.tee $2
+    i32.const 720
+    call $~lib/string/String.__concat
+    local.tee $3
+    local.get $1
+    call $~lib/number/I32#toString
+    local.tee $1
+    call $~lib/string/String.__concat
+    local.tee $4
+    i32.const 1192
+    call $~lib/string/String.__concat
+    local.tee $5
+    call $~lib/rt/pure/__retain
+    local.get $0
+    call $~lib/rt/pure/__release
+    local.get $2
+    call $~lib/rt/pure/__release
+    local.get $3
+    call $~lib/rt/pure/__release
+    local.get $1
+    call $~lib/rt/pure/__release
+    local.get $4
+    call $~lib/rt/pure/__release
+    local.get $5
+    call $~lib/rt/pure/__release
+    i32.const 1792
+    i32.const 88
+    i32.const 25
+    call $~lib/builtins/abort
+    unreachable
+   end
    i32.const 1
-   i32.shr_u
-   local.get $5
-   i32.add
-   i32.store
-   local.get $2
-   call $~lib/rt/pure/__release
-   local.get $0
-   call $~lib/rt/pure/__release
+   global.set $~lib/argc
+   local.get $4
+   local.get $3
+   call $~lib/string/String.fromCharCode|trampoline
+   local.tee $5
+   call $~lib/array/Array<~lib/string/String>#push
    local.get $1
+   i32.const 1
+   i32.add
+   local.tee $1
+   local.get $0
+   i32.add
+   i32.load8_u
+   local.set $3
+   loop $continue|2
+    local.get $3
+    i32.const 57
+    i32.le_s
+    i32.const 0
+    local.get $3
+    i32.const 48
+    i32.ge_s
+    select
+    if
+     i32.const 1
+     global.set $~lib/argc
+     local.get $4
+     local.get $3
+     call $~lib/string/String.fromCharCode|trampoline
+     local.tee $6
+     call $~lib/array/Array<~lib/string/String>#push
+     local.get $1
+     i32.const 1
+     i32.add
+     local.tee $1
+     local.get $0
+     i32.add
+     i32.load8_u
+     local.set $3
+     local.get $6
+     call $~lib/rt/pure/__release
+     br $continue|2
+    end
+   end
+   local.get $5
+   call $~lib/rt/pure/__release
+  end
+  i32.const 704
+  call $~lib/rt/pure/__retain
+  drop
+  local.get $4
+  call $~lib/array/Array<~lib/string/String>#join_str
+  local.set $0
+  i32.const 704
+  call $~lib/rt/pure/__release
+  local.get $0
+  call $~lib/rt/pure/__retain
+  drop
+  local.get $0
+  call $~lib/util/string/strtod
+  local.set $7
+  local.get $0
+  call $~lib/rt/pure/__release
+  i32.const 16
+  i32.const 7
+  call $~lib/rt/tlsf/__alloc
+  call $~lib/rt/pure/__retain
+  call $assembly/json/JValue/JValue#constructor
+  local.tee $1
+  local.get $7
+  f64.store offset=8
+  local.get $1
+  local.get $0
+  i32.const 16
+  i32.sub
+  i32.load offset=12
+  i32.const 1
+  i32.shr_u
+  local.get $2
+  i32.add
+  i32.store
+  local.get $4
+  call $~lib/rt/pure/__release
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+ )
+ (func $assembly/decoder/parse/parseJValue/parseJValue (; 84 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  local.get $0
+  i32.const 0
+  local.get $1
+  call $assembly/decoder/parse/parseWhiteSpace/parseWhiteSpace
+  local.tee $3
+  local.tee $2
+  local.get $1
+  i32.eq
+  if
+   i32.const 400
+   i32.const 504
+   i32.const 21
+   i32.const 20
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  local.get $2
+  i32.add
+  i32.load8_u
+  local.tee $1
+  i32.const 116
+  i32.eq
+  if
+   local.get $0
+   local.get $2
+   local.get $3
+   call $assembly/decoder/parse/parseTrue/parseTrue
+   return
+  end
+  local.get $1
+  i32.const 102
+  i32.eq
+  if
+   local.get $0
+   local.get $2
+   local.get $3
+   call $assembly/decoder/parse/parseFalse/parseFalse
+   return
+  end
+  local.get $1
+  i32.const 110
+  i32.eq
+  if
+   local.get $0
+   local.get $2
+   local.get $3
+   call $assembly/decoder/parse/parseNull/parseNull
+   return
+  end
+  i32.const 1
+  local.get $1
+  i32.const 43
+  i32.eq
+  i32.const 1
+  local.get $1
+  i32.const 45
+  i32.eq
+  local.get $1
+  i32.const 57
+  i32.le_s
+  i32.const 0
+  local.get $1
+  i32.const 48
+  i32.ge_s
+  select
+  select
+  select
+  if
+   local.get $0
+   local.get $2
+   local.get $3
+   call $assembly/decoder/parse/parseNumber/parseNumber
    return
   end
   i32.const 1
   global.set $~lib/argc
-  i32.const 584
-  local.get $2
+  i32.const 600
+  local.get $1
   call $~lib/string/String.fromCharCode|trampoline
   local.tee $0
   call $~lib/string/String.__concat
-  local.tee $2
-  i32.const 704
-  call $~lib/string/String.__concat
-  local.tee $5
-  local.get $1
-  call $~lib/number/I32#toString
   local.tee $1
+  i32.const 720
   call $~lib/string/String.__concat
   local.tee $3
-  i32.const 1176
+  local.get $2
+  call $~lib/number/I32#toString
+  local.tee $2
   call $~lib/string/String.__concat
   local.tee $4
+  i32.const 1192
+  call $~lib/string/String.__concat
+  local.tee $5
   call $~lib/rt/pure/__retain
   local.get $0
-  call $~lib/rt/pure/__release
-  local.get $2
-  call $~lib/rt/pure/__release
-  local.get $5
   call $~lib/rt/pure/__release
   local.get $1
   call $~lib/rt/pure/__release
   local.get $3
   call $~lib/rt/pure/__release
+  local.get $2
+  call $~lib/rt/pure/__release
   local.get $4
   call $~lib/rt/pure/__release
+  local.get $5
+  call $~lib/rt/pure/__release
   i32.const 504
-  i32.const 60
-  i32.const 4
+  i32.const 39
+  i32.const 2
   call $~lib/builtins/abort
   unreachable
  )
- (func $assembly/decoder/JSONDecoder/JSONDecoder.decode (; 77 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $assembly/decoder/JSONDecoder/JSONDecoder.decode (; 85 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
   (local $4 i32)
   (local $5 i32)
   (local $6 i32)
-  (local $7 i32)
-  (local $8 i32)
   local.get $0
   call $~lib/rt/pure/__retain
   drop
   local.get $0
   call $~lib/string/String#toUTF8
   call $~lib/rt/pure/__retain
-  local.tee $3
+  local.tee $2
   local.set $5
-  local.get $3
+  local.get $2
   local.get $0
   call $~lib/string/String#get:lengthUTF8
   i32.const 1
   i32.sub
-  local.tee $2
-  call $assembly/decoder/JSONDecoder/JSONDecoder.parseJValue
-  local.tee $8
+  local.tee $3
+  call $assembly/decoder/parse/parseJValue/parseJValue
+  local.tee $4
   i32.load
   local.tee $1
-  local.set $6
-  local.get $1
-  local.set $4
   local.get $2
-  local.set $1
-  i32.const 0
-  local.set $2
-  loop $continue|0
-   local.get $4
-   local.get $1
-   i32.lt_s
-   if (result i32)
-    local.get $3
-    local.get $4
-    i32.add
-    i32.load8_u
-    local.tee $7
-    i32.const 13
-    i32.eq
-    if (result i32)
-     i32.const 1
-    else     
-     local.get $7
-     i32.const 10
-     i32.eq
-    end
-    if (result i32)
-     i32.const 1
-    else     
-     local.get $7
-     i32.const 32
-     i32.eq
-    end
-    if (result i32)
-     i32.const 1
-    else     
-     local.get $7
-     i32.const 9
-     i32.eq
-    end
-   else    
-    i32.const 0
-   end
-   if
-    local.get $2
-    i32.const 1
-    i32.add
-    local.set $2
-    local.get $4
-    i32.const 1
-    i32.add
-    local.set $4
-    br $continue|0
-   end
-  end
   local.get $1
-  local.get $2
-  local.get $6
+  local.get $3
+  call $assembly/decoder/parse/parseWhiteSpace/parseWhiteSpace
   i32.add
-  local.tee $1
+  local.set $1
+  local.get $1
+  local.get $3
   i32.ne
   if
    local.get $0
    call $~lib/rt/pure/__release
-   local.get $3
+   local.get $2
    call $~lib/rt/pure/__release
-   local.get $8
+   local.get $4
    call $~lib/rt/pure/__release
    local.get $1
    local.get $5
@@ -5474,29 +5568,25 @@
    local.set $0
    i32.const 1
    global.set $~lib/argc
-   i32.const 584
+   i32.const 600
    local.get $0
    call $~lib/string/String.fromCharCode|trampoline
-   local.tee $5
+   local.tee $0
    call $~lib/string/String.__concat
-   local.tee $6
-   i32.const 704
-   call $~lib/string/String.__concat
-   local.tee $4
-   local.get $1
-   call $~lib/number/I32#toString
    local.tee $2
+   i32.const 720
    call $~lib/string/String.__concat
    local.tee $3
-   i32.const 1176
-   call $~lib/string/String.__concat
+   local.get $1
+   call $~lib/number/I32#toString
    local.tee $1
+   call $~lib/string/String.__concat
+   local.tee $4
+   i32.const 1192
+   call $~lib/string/String.__concat
+   local.tee $5
    call $~lib/rt/pure/__retain
-   local.get $5
-   call $~lib/rt/pure/__release
-   local.get $6
-   call $~lib/rt/pure/__release
-   local.get $4
+   local.get $0
    call $~lib/rt/pure/__release
    local.get $2
    call $~lib/rt/pure/__release
@@ -5504,19 +5594,23 @@
    call $~lib/rt/pure/__release
    local.get $1
    call $~lib/rt/pure/__release
-   i32.const 504
-   i32.const 25
+   local.get $4
+   call $~lib/rt/pure/__release
+   local.get $5
+   call $~lib/rt/pure/__release
+   i32.const 1968
+   i32.const 24
    i32.const 22
    call $~lib/builtins/abort
    unreachable
   end
-  local.get $3
+  local.get $2
   call $~lib/rt/pure/__release
   local.get $0
   call $~lib/rt/pure/__release
-  local.get $8
+  local.get $4
  )
- (func $node_modules/as-pect/assembly/internal/Expectation/Expectation<assembly/json/JValue/JValue>#constructor (; 78 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $node_modules/as-pect/assembly/internal/Expectation/Expectation<assembly/json/JValue/JValue>#constructor (; 86 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
   local.get $0
@@ -5551,7 +5645,7 @@
   call $~lib/rt/pure/__release
   local.get $1
  )
- (func $node_modules/as-pect/assembly/internal/report/reportActual/Actual.clear (; 79 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/internal/report/reportActual/Actual.clear (; 87 ;) (type $FUNCSIG$v)
   i32.const 0
   global.set $node_modules/as-pect/assembly/internal/report/reportActual/Actual.type
   global.get $node_modules/as-pect/assembly/internal/report/reportActual/Actual.reference
@@ -5566,7 +5660,7 @@
   i32.const -1
   global.set $node_modules/as-pect/assembly/internal/report/reportActual/Actual.stackTrace
  )
- (func $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.clear (; 80 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.clear (; 88 ;) (type $FUNCSIG$v)
   i32.const 0
   global.set $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.type
   global.get $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.reference
@@ -5579,11 +5673,11 @@
    global.set $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.reference
   end
  )
- (func $node_modules/as-pect/assembly/internal/Expectation/Expectation<assembly/json/JValue/JValue>#toBeTruthy (; 81 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $node_modules/as-pect/assembly/internal/Expectation/Expectation<assembly/json/JValue/JValue>#toBeTruthy (; 89 ;) (type $FUNCSIG$vi) (param $0 i32)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
-  i32.const 1784
+  i32.const 2048
   call $~lib/rt/pure/__retain
   drop
   local.get $0
@@ -5593,7 +5687,7 @@
   local.get $0
   i32.load
   local.set $0
-  i32.const 1784
+  i32.const 2048
   call $~lib/rt/pure/__retain
   local.set $3
   local.get $2
@@ -5639,7 +5733,7 @@
    local.get $1
    call $~lib/rt/pure/__release
    local.get $1
-   i32.const 1864
+   i32.const 2128
    i32.const 11
    i32.const 18
    call $~lib/builtins/abort
@@ -5653,10 +5747,10 @@
   call $~lib/rt/pure/__release
   call $node_modules/as-pect/assembly/internal/report/reportActual/Actual.clear
   call $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.clear
-  i32.const 1784
+  i32.const 2048
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|0 (; 82 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|0 (; 90 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
   i32.const 376
@@ -5676,7 +5770,7 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $node_modules/as-pect/assembly/internal/Test/it (; 83 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $node_modules/as-pect/assembly/internal/Test/it (; 91 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   local.get $0
   call $~lib/rt/pure/__retain
   drop
@@ -5686,13 +5780,13 @@
   local.get $0
   call $~lib/rt/pure/__release
  )
- (func $~lib/rt/__instanceof (; 84 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+ (func $~lib/rt/__instanceof (; 92 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
   local.get $0
   i32.const 16
   i32.sub
   i32.load offset=8
   local.tee $0
-  i32.const 2912
+  i32.const 3384
   i32.load
   i32.le_u
   if
@@ -5707,7 +5801,7 @@
     local.get $0
     i32.const 3
     i32.shl
-    i32.const 2916
+    i32.const 3388
     i32.add
     i32.load offset=4
     local.tee $0
@@ -5716,10 +5810,10 @@
   end
   i32.const 0
  )
- (func $node_modules/as-pect/assembly/internal/Expectation/Expectation<bool>#toBeTruthy (; 85 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $node_modules/as-pect/assembly/internal/Expectation/Expectation<bool>#toBeTruthy (; 93 ;) (type $FUNCSIG$vi) (param $0 i32)
   (local $1 i32)
   (local $2 i32)
-  i32.const 2112
+  i32.const 2376
   call $~lib/rt/pure/__retain
   drop
   local.get $0
@@ -5728,7 +5822,7 @@
   local.get $0
   i32.load
   local.set $0
-  i32.const 2112
+  i32.const 2376
   call $~lib/rt/pure/__retain
   local.set $2
   call $node_modules/as-pect/assembly/internal/report/reportActual/getStackTrace
@@ -5760,7 +5854,7 @@
    local.get $0
    call $~lib/rt/pure/__release
    local.get $0
-   i32.const 1864
+   i32.const 2128
    i32.const 11
    i32.const 18
    call $~lib/builtins/abort
@@ -5772,10 +5866,10 @@
   call $~lib/rt/pure/__release
   call $node_modules/as-pect/assembly/internal/report/reportActual/Actual.clear
   call $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.clear
-  i32.const 2112
+  i32.const 2376
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|1 (; 86 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|1 (; 94 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -5811,7 +5905,7 @@
   local.get $0
   call $~lib/rt/pure/__release
  )
- (func $node_modules/as-pect/assembly/internal/Expectation/expect<f64> (; 87 ;) (type $FUNCSIG$id) (param $0 f64) (result i32)
+ (func $node_modules/as-pect/assembly/internal/Expectation/expect<f64> (; 95 ;) (type $FUNCSIG$id) (param $0 f64) (result i32)
   (local $1 i32)
   i32.const 16
   i32.const 12
@@ -5828,11 +5922,11 @@
   f64.store offset=8
   local.get $1
  )
- (func $node_modules/as-pect/assembly/internal/Expectation/Expectation<f64>#toBe (; 88 ;) (type $FUNCSIG$vid) (param $0 i32) (param $1 f64)
+ (func $node_modules/as-pect/assembly/internal/Expectation/Expectation<f64>#toBe (; 96 ;) (type $FUNCSIG$vid) (param $0 i32) (param $1 f64)
   (local $2 f64)
   (local $3 i32)
   (local $4 i32)
-  i32.const 688
+  i32.const 704
   call $~lib/rt/pure/__retain
   drop
   local.get $0
@@ -5841,7 +5935,7 @@
   local.get $0
   i32.load
   local.set $0
-  i32.const 688
+  i32.const 704
   call $~lib/rt/pure/__retain
   local.set $3
   call $node_modules/as-pect/assembly/internal/report/reportActual/getStackTrace
@@ -5879,7 +5973,7 @@
    local.get $0
    call $~lib/rt/pure/__release
    local.get $0
-   i32.const 1864
+   i32.const 2128
    i32.const 11
    i32.const 18
    call $~lib/builtins/abort
@@ -5891,10 +5985,10 @@
   call $~lib/rt/pure/__release
   call $node_modules/as-pect/assembly/internal/report/reportActual/Actual.clear
   call $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.clear
-  i32.const 688
+  i32.const 704
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|2 (; 89 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|2 (; 97 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
   i32.const 376
@@ -5910,10 +6004,10 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|3 (; 90 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|3 (; 98 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
-  i32.const 2336
+  i32.const 2600
   call $assembly/decoder/JSONDecoder/JSONDecoder.decode
   local.tee $0
   f64.load offset=8
@@ -5926,10 +6020,10 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|4 (; 91 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|4 (; 99 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
-  i32.const 2440
+  i32.const 2704
   call $assembly/decoder/JSONDecoder/JSONDecoder.decode
   local.tee $0
   f64.load offset=8
@@ -5942,10 +6036,10 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|5 (; 92 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|5 (; 100 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
-  i32.const 2544
+  i32.const 2808
   call $assembly/decoder/JSONDecoder/JSONDecoder.decode
   local.tee $0
   f64.load offset=8
@@ -5958,10 +6052,27 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|6 (; 93 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|6 (; 101 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
-  i32.const 2640
+  call $~lib/array/Array<~lib/string/String>#constructor
+  local.set $0
+  i32.const 1
+  global.set $~lib/argc
+  local.get $0
+  i32.const 46
+  call $~lib/string/String.fromCharCode|trampoline
+  local.tee $1
+  call $~lib/array/Array<~lib/string/String>#push
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+  call $~lib/rt/pure/__release
+ )
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|7 (; 102 ;) (type $FUNCSIG$v)
+  (local $0 i32)
+  (local $1 i32)
+  i32.const 2944
   call $assembly/decoder/JSONDecoder/JSONDecoder.decode
   local.tee $0
   f64.load offset=8
@@ -5974,10 +6085,10 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|8 (; 94 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|8 (; 103 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
-  i32.const 2744
+  i32.const 3048
   call $assembly/decoder/JSONDecoder/JSONDecoder.decode
   local.tee $0
   f64.load offset=8
@@ -5990,10 +6101,10 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|9 (; 95 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|9 (; 104 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
-  i32.const 2784
+  i32.const 3088
   call $assembly/decoder/JSONDecoder/JSONDecoder.decode
   local.tee $0
   f64.load offset=8
@@ -6006,10 +6117,10 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|10 (; 96 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|10 (; 105 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
-  i32.const 2832
+  i32.const 3136
   call $assembly/decoder/JSONDecoder/JSONDecoder.decode
   local.tee $0
   f64.load offset=8
@@ -6022,10 +6133,10 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|11 (; 97 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|11 (; 106 ;) (type $FUNCSIG$v)
   (local $0 i32)
   (local $1 i32)
-  i32.const 2880
+  i32.const 3184
   call $assembly/decoder/JSONDecoder/JSONDecoder.decode
   local.tee $0
   f64.load offset=8
@@ -6038,58 +6149,399 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/JNumber.spec~anonymous|0 (; 98 ;) (type $FUNCSIG$v)
+ (func $~lib/util/string/compareImpl (; 107 ;) (type $FUNCSIG$iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  local.get $0
+  call $~lib/rt/pure/__retain
+  drop
+  local.get $1
+  call $~lib/rt/pure/__retain
+  drop
+  local.get $0
+  local.set $3
+  local.get $1
+  local.set $4
+  loop $continue|0
+   local.get $2
+   if (result i32)
+    local.get $3
+    i32.load16_u
+    local.get $4
+    i32.load16_u
+    i32.sub
+    local.tee $5
+    i32.eqz
+   else    
+    i32.const 0
+   end
+   if
+    local.get $2
+    i32.const 1
+    i32.sub
+    local.set $2
+    local.get $3
+    i32.const 2
+    i32.add
+    local.set $3
+    local.get $4
+    i32.const 2
+    i32.add
+    local.set $4
+    br $continue|0
+   end
+  end
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+  call $~lib/rt/pure/__release
+  local.get $5
+ )
+ (func $~lib/string/String.__eq (; 108 ;) (type $FUNCSIG$iii) (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $0
+  call $~lib/rt/pure/__retain
+  drop
+  local.get $1
+  call $~lib/rt/pure/__retain
+  drop
+  local.get $0
+  local.get $1
+  i32.eq
+  if
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $1
+   call $~lib/rt/pure/__release
+   i32.const 1
+   return
+  end
+  block $folding-inner0
+   local.get $1
+   i32.eqz
+   i32.const 1
+   local.get $0
+   select
+   br_if $folding-inner0
+   local.get $0
+   i32.const 16
+   i32.sub
+   i32.load offset=12
+   i32.const 1
+   i32.shr_u
+   local.tee $2
+   local.get $1
+   i32.const 16
+   i32.sub
+   i32.load offset=12
+   i32.const 1
+   i32.shr_u
+   i32.ne
+   br_if $folding-inner0
+   local.get $0
+   local.get $1
+   local.get $2
+   call $~lib/util/string/compareImpl
+   i32.eqz
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $1
+   call $~lib/rt/pure/__release
+   return
+  end
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+  call $~lib/rt/pure/__release
+  i32.const 0
+ )
+ (func $node_modules/as-pect/assembly/internal/log/log<~lib/string/String> (; 109 ;) (type $FUNCSIG$vi) (param $0 i32)
+  local.get $0
+  call $~lib/rt/pure/__retain
+  drop
+  global.get $node_modules/as-pect/assembly/internal/log/ignoreLogs
+  if
+   local.get $0
+   call $~lib/rt/pure/__release
+   return
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/string/String.__eq
+  if
+   call $node_modules/as-pect/assembly/internal/log/logNull
+  else   
+   local.get $0
+   call $node_modules/as-pect/assembly/internal/log/logString
+  end
+  local.get $0
+  call $~lib/rt/pure/__release
+ )
+ (func $node_modules/as-pect/assembly/internal/Expectation/Expectation<~lib/string/String>#constructor (; 110 ;) (type $FUNCSIG$ii) (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  local.get $0
+  call $~lib/rt/pure/__retain
+  drop
+  i32.const 8
+  i32.const 13
+  call $~lib/rt/tlsf/__alloc
+  call $~lib/rt/pure/__retain
+  local.tee $1
+  i32.const 0
+  i32.store
+  local.get $1
+  i32.const 0
+  i32.store offset=4
+  local.get $1
+  i32.load offset=4
+  local.tee $2
+  local.get $0
+  i32.ne
+  if
+   local.get $0
+   call $~lib/rt/pure/__retain
+   drop
+   local.get $2
+   call $~lib/rt/pure/__release
+  end
+  local.get $1
+  local.get $0
+  i32.store offset=4
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+ )
+ (func $node_modules/as-pect/assembly/internal/Expectation/Expectation<~lib/string/String>#toBe (; 111 ;) (type $FUNCSIG$vi) (param $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  i32.const 3304
+  call $~lib/rt/pure/__retain
+  drop
+  i32.const 704
+  call $~lib/rt/pure/__retain
+  drop
+  local.get $0
+  i32.load offset=4
+  call $~lib/rt/pure/__retain
+  local.set $2
+  i32.const 3304
+  call $~lib/rt/pure/__retain
+  local.set $3
+  local.get $0
+  i32.load
+  local.set $1
+  i32.const 704
+  call $~lib/rt/pure/__retain
+  local.set $4
+  local.get $2
+  call $~lib/rt/pure/__retain
+  local.set $0
+  call $node_modules/as-pect/assembly/internal/report/reportActual/getStackTrace
+  global.set $node_modules/as-pect/assembly/internal/report/reportActual/Actual.stackTrace
+  local.get $0
+  i32.const 0
+  call $~lib/string/String.__eq
+  if
+   i32.const 1
+   global.set $node_modules/as-pect/assembly/internal/report/reportActual/Actual.type
+  else   
+   local.get $0
+   call $~lib/rt/pure/__retain
+   drop
+   global.get $node_modules/as-pect/assembly/internal/report/reportActual/Actual.reference
+   call $~lib/rt/pure/__release
+   local.get $0
+   global.set $node_modules/as-pect/assembly/internal/report/reportActual/Actual.reference
+   i32.const 5
+   global.set $node_modules/as-pect/assembly/internal/report/reportActual/Actual.type
+  end
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $3
+  call $~lib/rt/pure/__retain
+  local.set $0
+  block $node_modules/as-pect/assembly/internal/report/reportExpected/reportExpected<~lib/string/String>|inlined.0
+   global.get $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.ready
+   i32.eqz
+   if
+    call $node_modules/as-pect/assembly/internal/report/reportExpected/reportInvalidExpectCall
+    br $node_modules/as-pect/assembly/internal/report/reportExpected/reportExpected<~lib/string/String>|inlined.0
+   end
+   call $node_modules/as-pect/assembly/internal/report/reportExpected/getStackTrace
+   global.set $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.stackTrace
+   local.get $1
+   global.set $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.negated
+   local.get $0
+   i32.const 0
+   call $~lib/string/String.__eq
+   if
+    i32.const 1
+    global.set $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.type
+   else    
+    local.get $0
+    call $~lib/rt/pure/__retain
+    drop
+    global.get $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.reference
+    call $~lib/rt/pure/__release
+    local.get $0
+    global.set $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.reference
+    i32.const 5
+    global.set $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.type
+   end
+  end
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $3
+  local.get $2
+  call $~lib/string/String.__eq
+  local.get $1
+  i32.xor
+  local.get $4
+  call $~lib/rt/pure/__retain
+  local.set $0
+  i32.eqz
+  if
+   local.get $0
+   call $~lib/rt/pure/__release
+   local.get $0
+   i32.const 2128
+   i32.const 11
+   i32.const 18
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $4
+  call $~lib/rt/pure/__release
+  local.get $3
+  call $~lib/rt/pure/__release
+  local.get $2
+  call $~lib/rt/pure/__release
+  call $node_modules/as-pect/assembly/internal/report/reportActual/Actual.clear
+  call $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.clear
+  i32.const 3304
+  call $~lib/rt/pure/__release
+  i32.const 704
+  call $~lib/rt/pure/__release
+ )
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0~anonymous|12 (; 112 ;) (type $FUNCSIG$v)
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  i32.const 1
+  global.set $~lib/argc
+  i32.const 600
+  i32.const 46
+  call $~lib/string/String.fromCharCode|trampoline
+  local.tee $1
+  call $~lib/string/String.__concat
+  local.tee $2
+  i32.const 720
+  call $~lib/string/String.__concat
+  local.tee $3
+  i32.const 1
+  call $~lib/number/I32#toString
+  local.tee $4
+  call $~lib/string/String.__concat
+  local.tee $5
+  i32.const 1192
+  call $~lib/string/String.__concat
+  local.tee $6
+  call $~lib/rt/pure/__retain
+  local.set $0
+  local.get $1
+  call $~lib/rt/pure/__release
+  local.get $2
+  call $~lib/rt/pure/__release
+  local.get $3
+  call $~lib/rt/pure/__release
+  local.get $4
+  call $~lib/rt/pure/__release
+  local.get $5
+  call $~lib/rt/pure/__release
+  local.get $6
+  call $~lib/rt/pure/__release
+  local.get $0
+  call $node_modules/as-pect/assembly/internal/log/log<~lib/string/String>
+  local.get $0
+  call $~lib/rt/pure/__retain
+  drop
+  local.get $0
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<~lib/string/String>#constructor
+  local.set $1
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<~lib/string/String>#toBe
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+  call $~lib/rt/pure/__release
+ )
+ (func $start:assembly/__tests__/JNumber.spec~anonymous|0 (; 113 ;) (type $FUNCSIG$v)
   i32.const 304
   i32.const 1
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2000
+  i32.const 2264
   i32.const 2
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2200
+  i32.const 2464
   i32.const 3
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2264
+  i32.const 2528
   i32.const 4
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2368
+  i32.const 2632
   i32.const 5
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2472
+  i32.const 2736
   i32.const 6
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2576
+  i32.const 2840
   i32.const 7
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2576
+  i32.const 2880
   i32.const 8
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2680
+  i32.const 2984
   i32.const 9
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2680
+  i32.const 2984
   i32.const 10
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2680
+  i32.const 2984
   i32.const 11
   call $node_modules/as-pect/assembly/internal/Test/it
-  i32.const 2680
+  i32.const 2984
   i32.const 12
   call $node_modules/as-pect/assembly/internal/Test/it
+  i32.const 3232
+  i32.const 13
+  call $node_modules/as-pect/assembly/internal/Test/it
  )
- (func $start:node_modules/as-pect/assembly/internal/noOp~anonymous|0 (; 99 ;) (type $FUNCSIG$v)
+ (func $start:node_modules/as-pect/assembly/internal/noOp~anonymous|0 (; 114 ;) (type $FUNCSIG$v)
   nop
  )
- (func $node_modules/as-pect/assembly/index/__ready (; 100 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/index/__ready (; 115 ;) (type $FUNCSIG$v)
   i32.const 1
   global.set $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.ready
  )
- (func $node_modules/as-pect/assembly/internal/call/__call (; 101 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $node_modules/as-pect/assembly/internal/call/__call (; 116 ;) (type $FUNCSIG$vi) (param $0 i32)
   i32.const 0
   global.set $~lib/argc
   local.get $0
   call_indirect (type $FUNCSIG$v)
  )
- (func $node_modules/as-pect/assembly/internal/report/reportActual/__sendActual (; 102 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/internal/report/reportActual/__sendActual (; 117 ;) (type $FUNCSIG$v)
   (local $0 i32)
   block $break|0
    block $case7|0
@@ -6147,7 +6599,7 @@
    call $node_modules/as-pect/assembly/internal/report/reportActual/reportActualLong
   end
  )
- (func $node_modules/as-pect/assembly/internal/report/reportExpected/__sendExpected (; 103 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/internal/report/reportExpected/__sendExpected (; 118 ;) (type $FUNCSIG$v)
   (local $0 i32)
   block $break|0
    block $case9|0
@@ -6229,24 +6681,24 @@
    call $node_modules/as-pect/assembly/internal/report/reportExpected/reportExpectedLong
   end
  )
- (func $node_modules/as-pect/assembly/internal/log/__ignoreLogs (; 104 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $node_modules/as-pect/assembly/internal/log/__ignoreLogs (; 119 ;) (type $FUNCSIG$vi) (param $0 i32)
   local.get $0
   i32.const 0
   i32.ne
   global.set $node_modules/as-pect/assembly/internal/log/ignoreLogs
  )
- (func $node_modules/as-pect/assembly/internal/RTrace/__disableRTrace (; 105 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/internal/RTrace/__disableRTrace (; 120 ;) (type $FUNCSIG$v)
   i32.const 0
   global.set $node_modules/as-pect/assembly/internal/RTrace/RTrace.enabled
  )
- (func $node_modules/as-pect/assembly/internal/RTrace/__getUsizeArrayId (; 106 ;) (type $FUNCSIG$i) (result i32)
-  i32.const 13
+ (func $node_modules/as-pect/assembly/internal/RTrace/__getUsizeArrayId (; 121 ;) (type $FUNCSIG$i) (result i32)
+  i32.const 14
  )
- (func $node_modules/as-pect/assembly/internal/Expectation/__cleanup (; 107 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/internal/Expectation/__cleanup (; 122 ;) (type $FUNCSIG$v)
   call $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.clear
   call $node_modules/as-pect/assembly/internal/report/reportActual/Actual.clear
  )
- (func $start (; 108 ;) (type $FUNCSIG$v)
+ (func $start (; 123 ;) (type $FUNCSIG$v)
   global.get $~lib/started
   if
    return
@@ -6268,9 +6720,9 @@
   i32.const 272
   call $~lib/rt/pure/__release
  )
- (func $~lib/rt/pure/__visit (; 109 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/rt/pure/__visit (; 124 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   local.get $0
-  i32.const 3028
+  i32.const 3508
   i32.lt_u
   if
    return
@@ -6378,7 +6830,7 @@
    unreachable
   end
  )
- (func $~lib/array/Array<~lib/string/String>#__visit_impl (; 110 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<~lib/string/String>#__visit_impl (; 125 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
   local.get $0
@@ -6411,7 +6863,7 @@
    end
   end
  )
- (func $~lib/rt/__visit_members (; 111 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/rt/__visit_members (; 126 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   block $block$4$break
    block $switch$1$default
     block $switch$1$case$11
@@ -6421,7 +6873,7 @@
        i32.const 8
        i32.sub
        i32.load
-       br_table $switch$1$case$2 $switch$1$case$2 $block$4$break $switch$1$case$2 $switch$1$case$2 $switch$1$case$2 $block$4$break $switch$1$case$2 $switch$1$case$10 $switch$1$case$11 $switch$1$case$2 $switch$1$case$2 $switch$1$case$2 $block$4$break $switch$1$default
+       br_table $switch$1$case$2 $switch$1$case$2 $block$4$break $switch$1$case$2 $switch$1$case$2 $switch$1$case$2 $block$4$break $switch$1$case$2 $switch$1$case$10 $switch$1$case$11 $switch$1$case$2 $switch$1$case$2 $switch$1$case$2 $switch$1$case$11 $block$4$break $switch$1$default
       end
       return
      end
