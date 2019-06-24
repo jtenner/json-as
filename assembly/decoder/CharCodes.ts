@@ -23,9 +23,12 @@ export const enum CharCodes {
   CHAR_u = 117, // "u".charCodeAt(0)
   OPEN_BRACE = 123, // "{".charCodeAt(0)
   OPEN_BRACKET = 91, // "[".charCodeAt(0)
+  CLOSE_BRACE = 125, // "}".charCodeAt(0)
+  CLOSE_BRACKET = 93, // "]".charCodeAt(0)
   SYMBOL_PERIOD = 46, // ".".charCodeAt(0)
   WHITESPACE_CARRIAGE_RETURN = 13, // "\r".charCodeAt(0)
   WHITESPACE_NEWLINE = 10, // "\n".charCodeAt(0)
   WHITESPACE_SPACE = 32, // " ".charCodeAt(0)
   WHITESPACE_TAB = 9, // "\t".charCodeAt(0)
+  DOUBLE_QUOTE = 34,
 }
